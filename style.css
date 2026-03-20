@@ -4,6 +4,7 @@
     --text: #334155;
     --light-bg: #f8fafc;
     --white: #ffffff;
+    --border: #e2e8f0;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -13,60 +14,49 @@ body {
     display: flex;
     background-color: var(--light-bg);
     color: var(--text);
+    line-height: 1.6;
 }
 
 /* Sidebar Navigation */
 .sidebar {
-    width: 280px;
+    width: 260px;
     height: 100vh;
     background: var(--primary);
     color: white;
     position: fixed;
     padding: 2rem;
-    display: flex;
-    flex-direction: column;
+    overflow-y: auto;
 }
 
-.sidebar-header h1 { font-size: 1.5rem; margin-bottom: 0.5rem; }
-.status { font-size: 0.85rem; color: var(--secondary); opacity: 0.9; }
+.sidebar h1 { font-size: 1.4rem; margin-bottom: 0.2rem; }
+.status { font-size: 0.8rem; color: var(--secondary); margin-bottom: 2rem; display: block; }
 
-.nav-links { list-style: none; margin-top: 3rem; }
-.nav-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; margin: 1.5rem 0 0.5rem; color: var(--secondary); }
-.nav-links li a { color: white; text-decoration: none; display: block; padding: 0.5rem 0; transition: 0.2s; opacity: 0.8; }
-.nav-links li a:hover { opacity: 1; padding-left: 5px; color: var(--secondary); }
+.nav-links { list-style: none; }
+.nav-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; margin: 1.5rem 0 0.5rem; color: var(--secondary); font-weight: bold; }
+.nav-links li a { color: white; text-decoration: none; display: block; padding: 0.4rem 0; transition: 0.2s; opacity: 0.8; font-size: 0.95rem; }
+.nav-links li a:hover { opacity: 1; color: var(--secondary); padding-left: 5px; }
 
 /* Main Content Area */
-.content { margin-left: 280px; padding: 4rem 10%; max-width: 1200px; }
+.content { margin-left: 260px; padding: 4rem 8%; width: 100%; max-width: 1100px; }
 
-section { margin-bottom: 5rem; scroll-margin-top: 2rem; }
+h2 { color: var(--primary); font-size: 2rem; margin-bottom: 1.5rem; border-bottom: 3px solid var(--secondary); display: inline-block; padding-bottom: 5px; }
+p { margin-bottom: 1.2rem; font-size: 1.1rem; }
 
-.hero h1 { font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem; }
-.badge { display: inline-block; background: var(--secondary); color: var(--primary); padding: 0.5rem 1rem; border-radius: 20px; font-weight: bold; }
+/* Project Page Styling */
+.project-header { margin-bottom: 2rem; }
+.project-header .meta { font-style: italic; color: #64748b; margin-bottom: 1rem; display: block; }
+.specs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; }
+.spec-box { background: white; padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border); box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+.spec-box h4 { color: var(--primary); margin-bottom: 0.8rem; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
 
-h2 { border-bottom: 2px solid var(--secondary); display: inline-block; margin-bottom: 2rem; padding-bottom: 0.5rem; color: var(--primary); }
+/* Athletics Stats */
+.stats-container { display: flex; gap: 1rem; margin-top: 2rem; }
+.stat-card { background: var(--primary); color: white; padding: 2rem; border-radius: 12px; flex: 1; text-align: center; }
+.stat-card big { display: block; font-size: 2.5rem; font-weight: bold; color: var(--secondary); }
 
-/* Project Cards */
-.project-card {
-    background: var(--white);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-    border-left: 5px solid var(--primary);
-}
-
-.project-card h3 { margin-bottom: 0.5rem; }
-.location { display: block; font-size: 0.9rem; font-style: italic; margin-bottom: 1rem; color: #64748b; }
-.project-card ul { margin-left: 1.5rem; margin-top: 1rem; }
-
-/* Athletics Grid */
-.stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
-.stat-item { background: var(--primary); color: white; padding: 1.5rem; border-radius: 8px; text-align: center; }
-.stat-item strong { display: block; font-size: 1.5rem; color: var(--secondary); }
-
-/* Mobile Responsiveness */
 @media (max-width: 768px) {
     body { flex-direction: column; }
     .sidebar { width: 100%; height: auto; position: relative; }
     .content { margin-left: 0; padding: 2rem; }
+    .specs-grid { grid-template-columns: 1fr; }
 }
