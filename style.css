@@ -40,18 +40,26 @@ body {
 .content { margin-left: 260px; padding: 4rem 8%; width: 100%; max-width: 1100px; }
 
 h2 { color: var(--primary); font-size: 2rem; margin-bottom: 1.5rem; border-bottom: 3px solid var(--secondary); display: inline-block; padding-bottom: 5px; }
+h3 { margin-top: 2rem; margin-bottom: 1rem; color: var(--primary); }
 p { margin-bottom: 1.2rem; font-size: 1.1rem; }
+ul { margin-bottom: 1.2rem; margin-left: 1.5rem; font-size: 1.1rem; }
 
 /* Project Page Styling */
 .project-header { margin-bottom: 2rem; }
+.project-header h2 { margin-bottom: 0.5rem; }
 .project-header .meta { font-style: italic; color: #64748b; margin-bottom: 1rem; display: block; }
 .specs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; }
 .spec-box { background: white; padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border); box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
 .spec-box h4 { color: var(--primary); margin-bottom: 0.8rem; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
 
+/* Image Styling */
+.image-box { margin: 2rem 0; text-align: center; background: white; padding: 1rem; border-radius: 8px; border: 1px solid var(--border); }
+.image-box img { width: 100%; border-radius: 4px; }
+.caption { font-size: 0.85rem; color: #64748b; margin-top: 0.8rem; line-height: 1.4; }
+
 /* Athletics Stats */
-.stats-container { display: flex; gap: 1rem; margin-top: 2rem; }
-.stat-card { background: var(--primary); color: white; padding: 2rem; border-radius: 12px; flex: 1; text-align: center; }
+.stats-container { display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap; }
+.stat-card { background: var(--primary); color: white; padding: 2rem; border-radius: 12px; flex: 1; min-width: 200px; text-align: center; }
 .stat-card big { display: block; font-size: 2.5rem; font-weight: bold; color: var(--secondary); }
 
 @media (max-width: 768px) {
