@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>PeGS: Photoelastic Grain Solver | Will Siemens</title>
+    <meta charset="UTF-8"><title>PeGS | Will Siemens</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,7 +20,6 @@
             <li><a href="track.html">Track & Field</a></li>
         </ul>
     </nav>
-
     <main class="content">
         <div class="project-header">
             <h2>Photoelastic Grain Solver – Kamrin Group</h2>
@@ -31,43 +29,27 @@
         <p>The Photoelastic Grain Solver (PeGS) is a MATLAB-based tool developed to extract per-particle contact force measurements from images and video recordings of photoelastic granular materials. These materials consist of transparent, birefringent disks placed between crossed polarizing filters. When subjected to mechanical stress, each disk produces a distinctive light interference pattern, known as a fringe pattern, due to stress-induced birefringence. The intensity and geometry of these fringes directly reflect the internal stress distribution within each particle.</p>
 
         <div class="image-box">
-            <img src="fig2_fringe_comparison.jpg" alt="Fringe Pattern Comparison" style="width:100%; border-radius:8px;">
+            <img src="pegs-fringe.jpg" alt="Fringe Pattern Comparison">
             <p class="caption"><strong>Fig 2:</strong> Fringe in 1.4N Diametric Load Case – PeGS force solution within 3% of applied force. (Kamrin Group, unpublished data)</p>
         </div>
 
-        <p>PeGS estimates the contact forces on each particle by comparing experimentally observed fringe patterns to simulated patterns generated from hypothesized force configurations. Using a nonlinear optimization routine, the solver iteratively adjusts these force configurations to minimize an error function that quantifies the difference between the simulated and observed patterns. Once convergence is achieved, the resulting configuration provides an estimate of the true contact forces.</p>
-
-        <div class="image-box">
-            <img src="fig3_solver_routine.jpg" alt="PeGS Solver Routine Graphic" style="width:100%; border-radius:8px;">
-            <p class="caption"><strong>Fig 3:</strong> PeGS solver routine graphic made by Truman O'Brien.</p>
-        </div>
+        <p>PeGS estimates the contact forces on each particle by comparing experimentally observed fringe patterns to simulated patterns generated from hypothesized force configurations. Using a nonlinear optimization routine, the solver iteratively adjusts these force configurations to minimize an error function that quantifies the difference between the simulated and observed patterns.</p>
 
         <h3>Engineering Contributions & Improvements</h3>
         <p>Under the guidance of Professor Kenneth Kamrin, my research partner Truman O'Brien and I have developed and implemented several algorithmic improvements to PeGS aimed at enhancing both its computational efficiency and accuracy.</p>
         
-        <ul>
-            <li><strong>Analytic Gradient Integration:</strong> We derived and incorporated an analytic expression for the gradient of the solver’s error function, replacing MATLAB’s default finite-difference approximation. This change significantly reduces the computational cost per optimization step without affecting the accuracy of the recovered forces.</li>
-            <li><strong>Image Multi-Scaling Framework:</strong> We introduced a configurable framework that begins optimization at a lower image resolution and incrementally refines the solution at higher resolutions. This strategy reduces overall solve time while preserving force accuracy.</li>
-        </ul>
-
-        <p>We are now actively developing a new optimization routine for PeGS that solves multiple particles simultaneously. By incorporating physical constraints, such as force balance on each particle and Newton’s third law at contacts, we can reduce redundant computations and improve the consistency of the resulting force network.</p>
-
         <div class="specs-grid">
-            <div class="image-box">
-                <img src="fig4_dem_simulation.jpg" alt="DEM Simulation" style="width:100%; border-radius:8px;">
-                <p class="caption"><strong>Fig 4:</strong> DEM Simulation to Generate Packing</p>
+            <div class="spec-box">
+                <h4>Analytic Gradient Integration</h4>
+                <p>We derived and incorporated an analytic expression for the gradient of the solver’s error function, replacing MATLAB’s default finite-difference approximation. This significantly reduces computational cost per optimization step.</p>
             </div>
-            <div class="image-box">
-                <img src="fig5_simulated_network.jpg" alt="Simulated Network" style="width:100%; border-radius:8px;">
-                <p class="caption"><strong>Fig 5:</strong> Simulated Network Fringe Pattern</p>
+            <div class="spec-box">
+                <h4>Image Multi-Scaling Framework</h4>
+                <p>Introduced a method that begins optimization at a lower image resolution and incrementally refines the solution at higher resolutions, reducing overall solve time while preserving force accuracy.</p>
             </div>
         </div>
 
-        <div class="spec-box" style="margin-top: 2rem; font-size: 0.85rem;">
-            <h4>Image Credits</h4>
-            <p><strong>Fig. 1:</strong> Image from ongoing research by Nathalie Vriend and Benjamin McMillan. (2025)</p>
-            <p><strong>Fig. 2-5:</strong> Kamrin Group, unpublished data / Graphics by Truman O'Brien, 2025.</p>
-        </div>
+        <p>We are now actively developing a new optimization routine for PeGS that solves multiple particles simultaneously using physical constraints like Newton's third law at contacts to improve performance in dense granular packings.</p>
     </main>
 </body>
 </html>
