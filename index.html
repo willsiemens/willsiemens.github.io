@@ -1,70 +1,61 @@
-:root {
-    --primary: #003262; /* Berkeley Blue */
-    --secondary: #FDB515; /* California Gold */
-    --text: #334155;
-    --light-bg: #f8fafc;
-    --white: #ffffff;
-    --border: #e2e8f0;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>Home | Will Siemens</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="sidebar">
+        <h1>Will Siemens</h1>
+        <span class="status">MechE @ UC Berkeley '26</span>
+        <ul class="nav-links">
+            <li><a href="index.html" style="color:var(--secondary); opacity:1;">Home</a></li>
+            <li class="nav-label">Projects</li>
+            <li><a href="pegs.html">PeGS</a></li>
+            <li><a href="dealer-bot.html">Dealer Bot</a></li>
+            <li><a href="iot-remote.html">IoT Remote</a></li>
+            <li><a href="pneumatic-panel.html">Pneumatic Panel</a></li>
+            <li><a href="wind-turbine.html">Wind Turbine</a></li>
+            <li class="nav-label">Athletics</li>
+            <li><a href="track.html">Track & Field</a></li>
+        </ul>
+    </nav>
+    <main class="content">
+        
+        <div style="text-align: center; margin-top: 2rem; margin-bottom: 4rem;">
+            <h2 style="font-size: 3rem; margin-bottom: 1rem;">Will Siemens</h2>
+            <div style="width: 80px; height: 3px; background-color: var(--secondary, #3b82f6); margin: 0 auto 1.5rem auto;"></div>
+            <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">Mechanical Engineering Undergraduate and Student Athlete</p>
+            <p style="margin-bottom: 0.5rem;">Class of 2026</p>
+            <p>GPA: 3.960</p>
+        </div>
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+        <div style="background-color: #5b7083; color: white; padding: 3rem; border-radius: 8px; display: flex; flex-wrap: wrap; gap: 3rem; align-items: center; margin-bottom: 4rem;">
+            
+            <div style="flex: 1; min-width: 300px; text-align: center;">
+                <h3 style="color: white; margin-top: 0; font-size: 2rem; margin-bottom: 1.5rem;">About Me</h3>
+                <p style="color: white; line-height: 1.6; margin-bottom: 1rem;">Hello! My name is Will Siemens, I am currently a Mechanical Engineering Undergraduate Student at the University of California, Berkeley, class of 2026. I am also a Varsity Athlete with the California Track and Field Team.</p>
+                <p style="color: white; line-height: 1.6; margin-bottom: 1rem;">I pride myself on my work ethic and determination to learn and improve in any situation I am presented. I thoroughly enjoy learning and understanding how things in our world work and operate. I hope to expand my knowledge through the world of Mechanical Engineering.</p>
+                <p style="color: white; line-height: 1.6;">Outside of School, I enjoy many activities in the great outdoors such as backpacking and mountain biking with my family and friends. I hope to be a part of technological advancements that improve our lives while also improving our world.</p>
+            </div>
+            
+            <div style="flex: 0 0 300px; margin: 0 auto;">
+                <img src="headshot.jpg" alt="Will Siemens" style="width: 100%; border-radius: 4px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            </div>
+        </div>
 
-body {
-    font-family: 'Inter', sans-serif;
-    display: flex;
-    background-color: var(--light-bg);
-    color: var(--text);
-    line-height: 1.6;
-}
+        <div style="padding-bottom: 2rem;">
+            <h3>Contact</h3>
+            <p style="margin-bottom: 1.5rem;">I am always looking for opportunities to discuss mechanical design, robotics, or athletic performance. Feel free to reach out via the links below.</p>
+            
+            <ul style="list-style: none; padding: 0; line-height: 2;">
+                <li><a href="mailto:w.siemens04@gmail.com" style="color: var(--secondary, #3b82f6); text-decoration: underline;">w.siemens04@gmail.com</a></li>
+                <li><a href="#" style="color: var(--secondary, #3b82f6); text-decoration: underline;">Linked in</a></li>
+                <li style="margin-top: 0.5rem;">Berkeley, CA</li>
+            </ul>
+        </div>
 
-/* Sidebar Navigation */
-.sidebar {
-    width: 260px;
-    height: 100vh;
-    background: var(--primary);
-    color: white;
-    position: fixed;
-    padding: 2rem;
-    overflow-y: auto;
-}
-
-.sidebar h1 { font-size: 1.4rem; margin-bottom: 0.2rem; }
-.status { font-size: 0.8rem; color: var(--secondary); margin-bottom: 2rem; display: block; }
-
-.nav-links { list-style: none; }
-.nav-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; margin: 1.5rem 0 0.5rem; color: var(--secondary); font-weight: bold; }
-.nav-links li a { color: white; text-decoration: none; display: block; padding: 0.4rem 0; transition: 0.2s; opacity: 0.8; font-size: 0.95rem; }
-.nav-links li a:hover { opacity: 1; color: var(--secondary); padding-left: 5px; }
-
-/* Main Content Area */
-.content { margin-left: 260px; padding: 4rem 8%; width: 100%; max-width: 1100px; }
-
-h2 { color: var(--primary); font-size: 2rem; margin-bottom: 1.5rem; border-bottom: 3px solid var(--secondary); display: inline-block; padding-bottom: 5px; }
-h3 { margin-top: 2rem; margin-bottom: 1rem; color: var(--primary); }
-p { margin-bottom: 1.2rem; font-size: 1.1rem; }
-ul { margin-bottom: 1.2rem; margin-left: 1.5rem; font-size: 1.1rem; }
-
-/* Project Page Styling */
-.project-header { margin-bottom: 2rem; }
-.project-header h2 { margin-bottom: 0.5rem; }
-.project-header .meta { font-style: italic; color: #64748b; margin-bottom: 1rem; display: block; }
-.specs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0; }
-.spec-box { background: white; padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border); box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-.spec-box h4 { color: var(--primary); margin-bottom: 0.8rem; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
-
-/* Image Styling */
-.image-box { margin: 2rem 0; text-align: center; background: white; padding: 1rem; border-radius: 8px; border: 1px solid var(--border); }
-.image-box img { width: 100%; border-radius: 4px; }
-.caption { font-size: 0.85rem; color: #64748b; margin-top: 0.8rem; line-height: 1.4; }
-
-/* Athletics Stats */
-.stats-container { display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap; }
-.stat-card { background: var(--primary); color: white; padding: 2rem; border-radius: 12px; flex: 1; min-width: 200px; text-align: center; }
-.stat-card big { display: block; font-size: 2.5rem; font-weight: bold; color: var(--secondary); }
-
-@media (max-width: 768px) {
-    body { flex-direction: column; }
-    .sidebar { width: 100%; height: auto; position: relative; }
-    .content { margin-left: 0; padding: 2rem; }
-    .specs-grid { grid-template-columns: 1fr; }
-}
+    </main>
+</body>
+</html>
