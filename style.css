@@ -1,0 +1,72 @@
+:root {
+    --primary: #003262; /* Berkeley Blue */
+    --secondary: #FDB515; /* California Gold */
+    --text: #334155;
+    --light-bg: #f8fafc;
+    --white: #ffffff;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    background-color: var(--light-bg);
+    color: var(--text);
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    background: var(--primary);
+    color: white;
+    position: fixed;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-header h1 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+.status { font-size: 0.85rem; color: var(--secondary); opacity: 0.9; }
+
+.nav-links { list-style: none; margin-top: 3rem; }
+.nav-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; margin: 1.5rem 0 0.5rem; color: var(--secondary); }
+.nav-links li a { color: white; text-decoration: none; display: block; padding: 0.5rem 0; transition: 0.2s; opacity: 0.8; }
+.nav-links li a:hover { opacity: 1; padding-left: 5px; color: var(--secondary); }
+
+/* Main Content Area */
+.content { margin-left: 280px; padding: 4rem 10%; max-width: 1200px; }
+
+section { margin-bottom: 5rem; scroll-margin-top: 2rem; }
+
+.hero h1 { font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem; }
+.badge { display: inline-block; background: var(--secondary); color: var(--primary); padding: 0.5rem 1rem; border-radius: 20px; font-weight: bold; }
+
+h2 { border-bottom: 2px solid var(--secondary); display: inline-block; margin-bottom: 2rem; padding-bottom: 0.5rem; color: var(--primary); }
+
+/* Project Cards */
+.project-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    border-left: 5px solid var(--primary);
+}
+
+.project-card h3 { margin-bottom: 0.5rem; }
+.location { display: block; font-size: 0.9rem; font-style: italic; margin-bottom: 1rem; color: #64748b; }
+.project-card ul { margin-left: 1.5rem; margin-top: 1rem; }
+
+/* Athletics Grid */
+.stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
+.stat-item { background: var(--primary); color: white; padding: 1.5rem; border-radius: 8px; text-align: center; }
+.stat-item strong { display: block; font-size: 1.5rem; color: var(--secondary); }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    body { flex-direction: column; }
+    .sidebar { width: 100%; height: auto; position: relative; }
+    .content { margin-left: 0; padding: 2rem; }
+}
