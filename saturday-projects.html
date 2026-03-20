@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>Saturday Internship | Will Siemens</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="sidebar">
+        <h1>Will Siemens</h1>
+        <span class="status">MechE @ UC Berkeley '26</span>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="nav-label">Projects</li>
+            <li><a href="pegs.html">PeGS</a></li>
+            <li><a href="dealer-bot.html">Dealer Bot</a></li>
+            <li><a href="iot-remote.html">IoT Remote</a></li>
+            <li><a href="saturday-projects.html" style="color:var(--secondary); opacity:1;">Saturday Internship</a></li>
+            <li><a href="wind-turbine.html">Wind Turbine</a></li>
+            <li class="nav-label">Athletics</li>
+            <li><a href="track.html">Track & Field</a></li>
+        </ul>
+    </nav>
+    <main class="content">
+        
+        <div class="project-header" style="margin-top: 2rem;">
+            <h2>Saturday Internship Projects</h2>
+            <span class="meta">Internship Project - Summer 2024</span>
+        </div>
+        
+        <h3>Project Overview</h3>
+        <p>During my internship at Saturday Robotics, I was tasked with designing and manufacturing a centralized control system for pneumatic operations. The goal was to create a professional, ergonomic housing for a series of regulators and switches that prioritized accessible user input and organized internal tubing management.</p>
+
+        <div style="display: flex; gap: 2rem; margin: 3rem 0; flex-wrap: wrap;">
+            
+            <div style="flex: 1; min-width: 300px;">
+                <h3 style="margin-top: 0;">Key Features</h3>
+                <ul style="line-height: 1.6; padding-left: 1.2rem;">
+                    <li style="margin-bottom: 0.8rem;"><strong>Ergonomic Layout:</strong> Designed for comfortable, high-frequency usage with intuitive switch placement.</li>
+                    <li style="margin-bottom: 0.8rem;"><strong>Integrated Tubing Management:</strong> Internal routing paths designed to prevent kinks and maintain a clean, serviceable workspace.</li>
+                    <li><strong>Modular Frame:</strong> Built using 80/20 aluminum extrusion for easy mounting and future hardware expansions.</li>
+                </ul>
+            </div>
+
+            <div style="flex: 1; min-width: 300px;">
+                <h3 style="margin-top: 0;">Technical Implementation</h3>
+                <ul style="line-height: 1.6; padding-left: 1.2rem;">
+                    <li style="margin-bottom: 0.8rem;"><strong>CAD Modeling:</strong> Utilized SolidWorks to iterate through potential layouts, ensuring all pneumatic components had sufficient clearance for both the fittings and the minimum bend radius of the tubing.</li>
+                    <li style="margin-bottom: 0.8rem;"><strong>Rapid Prototyping:</strong> Transitioned from digital models to physical assembly by laser cutting custom mounting plates from stock material in the machine shop.</li>
+                    <li style="margin-bottom: 0.8rem;"><strong>Structural Design:</strong> Engineered a supporting chassis using 80/20 stock metal, ensuring the panel remained rigid under the mechanical load of the switches and regulators.</li>
+                    <li><strong>Manufacturing:</strong> Managed the full lifecycle from brainstorming and material selection to final assembly and pneumatic testing.</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 3rem; margin-bottom: 2rem;">
+            <div style="border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0;">
+                <img src="pneumatic-layout.jpg" alt="Initial Component Layout on Wood" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+            <div style="border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0;">
+                <img src="pneumatic-plates.jpg" alt="Laser Cut Mounting Plates" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+            <div style="border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0;">
+                <img src="pneumatic-front.jpg" alt="Assembled Panel Front View" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+            <div style="border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0;">
+                <img src="pneumatic-back.jpg" alt="Assembled Panel Back View with Tank" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>
