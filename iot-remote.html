@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8"><title>IoT Remote | Will Siemens</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="sidebar">
@@ -21,22 +22,23 @@
         </ul>
     </nav>
     <main class="content">
+        <div class="image-box" style="margin-top: 0; background: none; border: none; padding: 0;">
+            <img src="ME100Remotewhite-edited.jpg" alt="Custom IoT Remote" style="width: 100%; max-width: 600px; border-radius: 8px;">
+        </div>
+
         <div class="project-header">
             <h2>IoT Remote</h2>
-            <span class="meta">Mechatronics & Embedded Systems</span>
+            <span class="meta">Electronics & Internet of Things Class Project - Spring 2025 <br> With Truman O'Brien</span>
         </div>
         
-        <p>Designed and built a custom IoT-enabled remote to bridge the gap between physical user interfaces and smart-home connectivity. This project required integrating custom PCB housing with ergonomic mechanical design.</p>
+        <p>This project involved designing and building a custom wireless remote control system for the Audioengine A5+ speaker set, which no longer ships with a replaceable infrared remote. Our solution replaces the original IR interface with an ESP32-based IoT system that enables real-time, bidirectional communication between a 3D-printed handheld remote and a custom controller embedded within the speaker.</p>
 
-        <div class="specs-grid">
-            <div class="spec-box">
-                <h4>System Integration</h4>
-                <p>Integrated wireless modules with low-power microcontrollers, ensuring responsive latency and long battery life for a seamless user experience.</p>
-            </div>
-            <div class="spec-box">
-                <h4>Prototyping</h4>
-                <p>The external casing was designed in <strong>SolidWorks</strong> with a focus on ergonomics and <strong>3D-printed</strong> using high-resolution resin to achieve a professional finish.</p>
-            </div>
+        <p>The remote features a rotary encoder for volume and mute control, a low-power alphanumeric display, and an integrated sleep mode that significantly reduces power draw during inactivity. As a result, the device only needs to be recharged every few months under normal use. The speaker-side controller intercepts and emulates encoder signals to adjust volume via GPIO, preserving full compatibility with the original analog control circuit. Communication between the devices is handled over Wi-Fi using a custom message protocol with input queuing for reliability.</p>
+
+        <p>Key engineering challenges included reverse-engineering the speaker’s internal control logic, implementing robust low-power firmware, and ensuring seamless synchronization between physical and digital volume states. The final system offers a sleek, modern, and highly functional replacement for the original remote, with improved durability and user experience.</p>
+
+        <div class="image-box">
+            <img src="IMG_8892-768x1024.jpg" alt="Speaker Internal Circuitry" style="width: 100%; border-radius: 8px;">
         </div>
     </main>
 </body>
