@@ -9,8 +9,9 @@
     <link rel="canonical" href="https://willsiemens.github.io/" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header class="site-header">
@@ -32,33 +33,23 @@
     </header>
 
     <main class="page-shell">
-        <section class="hero">
-            <div class="hero-card">
-                <p class="eyebrow">UC Berkeley MechE 2026</p>
-                <h1>Mechanical design, manufacturing, and mechatronics portfolio.</h1>
+        <section class="home-hero">
+            <div class="home-copy">
+                <p class="eyebrow">UC Berkeley · Mechanical Engineering · Class of 2026</p>
+                <h1 class="home-title"><span>Will</span><span>Siemens</span></h1>
+                <p class="home-subtitle">Mechanical design, manufacturing, and mechatronics portfolio.</p>
                 <p class="lede">I build hardware from early concept through CAD, analysis, prototyping, manufacturing, and test. My work spans robotics, embedded systems, granular mechanics research, and performance-driven athletics.</p>
+                <p class="credential-line">SolidWorks + FEA <span>/</span> ESP32 controls <span>/</span> DFM and prototyping <span>/</span> Cal pole vault</p>
                 <div class="button-row">
                     <a class="btn btn-primary" href="resume.pdf" target="_blank" rel="noopener">View Resume</a>
                     <a class="btn btn-secondary" href="mailto:w.siemens04@gmail.com">Email Me</a>
                     <a class="btn btn-secondary" href="https://www.linkedin.com/in/will-siemens" target="_blank" rel="noopener">LinkedIn</a>
                 </div>
-                <div class="hero-kpis" aria-label="Portfolio highlights">
-                    <div class="kpi-card">
-                        <strong>CAD + FEA</strong>
-                        <span>SolidWorks, analysis, DFM</span>
-                    </div>
-                    <div class="kpi-card">
-                        <strong>Mechatronics</strong>
-                        <span>ESP32, motors, sensors</span>
-                    </div>
-                    <div class="kpi-card">
-                        <strong>D1 Athlete</strong>
-                        <span>Cal pole vault</span>
-                    </div>
-                </div>
             </div>
-            <div class="hero-visual" aria-label="Portrait of Will Siemens">
-                <img src="photos/Screenshot 2026-03-20 132517.png" alt="Will Siemens headshot">
+            <div class="home-portrait" aria-label="Portrait of Will Siemens">
+                <div class="portrait-frame">
+                    <img src="photos/Screenshot 2026-03-20 132517.png" alt="Will Siemens headshot">
+                </div>
             </div>
         </section>
 
