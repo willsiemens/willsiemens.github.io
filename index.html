@@ -4,137 +4,91 @@
     <meta name="google-site-verification" content="UfdtEqzu0ASBTh023_EygdExWLab47RvDRDFBoRBcy4" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Will Siemens | Mechanical Engineering</title>
+    <title>Home | Will Siemens</title>
     <meta name="description" content="Portfolio of Will Siemens, Mechanical Engineering undergraduate at UC Berkeley ('26) and Varsity Track & Field athlete.">
     <link rel="canonical" href="https://willsiemens.github.io/" />
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    
+    <nav class="sidebar">
+        <h1>Will Siemens</h1>
+        <span class="status">MechE @ UC Berkeley '26</span>
+        <ul class="nav-links">
+            <li><a href="index.html" style="color:var(--secondary); font-weight:600; opacity:1;">Home</a></li>
+            <li class="nav-label">Projects</li>
+            <li><a href="pegs.html">PeGS</a></li>
+            <li><a href="dealer-bot.html">Dealer Bot</a></li>
+            <li><a href="iot-remote.html">IoT Remote</a></li>
+            <li><a href="saturday-projects.html">Saturday Internship</a></li>
+            <li><a href="wind-turbine.html">Wind Turbine</a></li>
+            <li class="nav-label">Athletics</li>
+            <li><a href="track.html">Track & Field</a></li>
+        </ul>
+    </nav>
 
-    <header class="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">Will Siemens</a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="resume.pdf" target="_blank">Resume</a></li>
-                </ul>
-            </nav>
+    <main class="content">
+        
+        <header class="hero">
+            <h2>Hi, I'm Will Siemens.</h2>
+            <p class="hero-subtitle">Mechanical Engineering Undergraduate & Division 1 Student-Athlete at the University of California, Berkeley.</p>
+        </header>
+
+        <div class="intro-grid">
+            <div class="intro-text">
+                <h3>About Me</h3>
+                <p>I am deeply passionate about how things work. Whether it is finite element analysis, robotic mechatronics, or precision manufacturing, I love taking a project from a conceptual CAD model all the way through physical assembly and testing.</p>
+                <p>Balancing high-level athletics with a rigorous engineering curriculum has instilled in me a relentless work ethic and the ability to perform under pressure. Ultimately, I want to leverage my engineering background to design technological advancements that tangibly improve our world.</p>
+            </div>
+            <div class="intro-image">
+                <img src="photos/Screenshot 2026-03-20 132517.png" alt="Will Siemens Headshot">
+            </div>
         </div>
-    </header>
 
-    <main>
-        <section class="hero container">
-            <h1>Hey! I'm Will, a mechanical engineering student and Division 1 athlete at UC Berkeley.</h1>
-            <p class="hero-subtitle">I specialize in mechanical design, robotic mechatronics, and precision manufacturing. I love taking a project from a conceptual CAD model all the way through physical assembly and testing.</p>
-            
-            <div class="social-links">
-                <a href="mailto:w.siemens04@gmail.com" class="social-link">Email</a>
-                <a href="https://www.linkedin.com/in/will-siemens" target="_blank" class="social-link">LinkedIn</a>
-                <a href="resume.pdf" target="_blank" class="social-link">Resume</a>
-            </div>
-        </section>
-
-        <section id="work" class="work-section container">
-            <h2 class="section-title">Selected Work</h2>
-
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="photos/ME100Remotewhite-edited.jpg" alt="IoT Remote">
+        <section class="skills-section">
+            <h3>Technical Capabilities</h3>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h4>Design & Analysis</h4>
+                    <ul>
+                        <li>SolidWorks (3D CAD)</li>
+                        <li>Finite Element Analysis (FEA)</li>
+                        <li>Design for Manufacturing (DFM)</li>
+                        <li>Rapid Prototyping</li>
+                    </ul>
                 </div>
-                <div class="project-info">
-                    <h3>IoT Speaker Remote</h3>
-                    <p>Engineered a wireless ESP32-based remote for Audioengine speakers. Designed a custom 3D-printed housing, integrated an alphanumeric display, and wrote logic-level shifting software with deep sleep functionality.</p>
-                    <a href="iot-remote.html" class="btn-link">View Project &rarr;</a>
+                <div class="skill-card">
+                    <h4>Manufacturing</h4>
+                    <ul>
+                        <li>Laser Cutting & Sheet Metal</li>
+                        <li>3D Printing (FDM)</li>
+                        <li>Welding & Metal Fabrication</li>
+                        <li>Pneumatic Systems Assembly</li>
+                    </ul>
                 </div>
-            </div>
-
-            <div class="project-card reverse">
-                <div class="project-info">
-                    <h3>Photoelastic Grain Solver (PeGS)</h3>
-                    <p>Co-leading undergraduate research in the Kamrin Group to optimize the open-source PeGS codebase. Replaced legacy models with complex energy potential methods, improving accuracy and computational speed.</p>
-                    <a href="pegs.html" class="btn-link">View Project &rarr;</a>
-                </div>
-                <div class="project-image">
-                    <img src="photos/hopper1-1024x640.png" alt="PeGS Project">
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="photos/turbine-rotor-cad.jpg" alt="Wind Turbine">
-                </div>
-                <div class="project-info">
-                    <h3>Wind Turbine Design</h3>
-                    <p>Designed, analyzed, and manufactured an efficient horizontal-axis wind turbine capable of generating electrical power. Conducted extensive FEA and CAD modeling in SolidWorks.</p>
-                    <a href="wind-turbine.html" class="btn-link">View Project &rarr;</a>
-                </div>
-            </div>
-
-            <div class="project-card reverse">
-                <div class="project-info">
-                    <h3>Dealer Bot</h3>
-                    <p>An automated card-dealing robot dispensing playing cards with high precision. Engineered a friction-based roller system and programmed stepper motors for speed and trajectory control.</p>
-                    <a href="dealer-bot.html" class="btn-link">View Project &rarr;</a>
-                </div>
-                <div class="project-image">
-                    <div class="image-placeholder">Dealer Bot Image</div>
+                <div class="skill-card">
+                    <h4>Software & Electronics</h4>
+                    <ul>
+                        <li>MATLAB & Python</li>
+                        <li>C++ & MicroPython</li>
+                        <li>ESP32 & IoT Integration</li>
+                        <li>Circuit Design & Soldering</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <section id="experience" class="experience-section container">
-            <h2 class="section-title">Experience</h2>
-            
-            <div class="experience-list">
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <h3>Undergraduate Researcher</h3>
-                        <span class="exp-date">Spring 2025 – Present</span>
-                    </div>
-                    <span class="exp-company">Kamrin Group, UC Berkeley</span>
-                </div>
-
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <h3>Design Intern</h3>
-                        <span class="exp-date">Summer 2023 & 2024</span>
-                    </div>
-                    <span class="exp-company">Saturday Robotics</span>
-                </div>
-
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <h3>Varsity Athlete (Pole Vault)</h3>
-                        <span class="exp-date">Aug 2022 – Present</span>
-                    </div>
-                    <span class="exp-company">California Track and Field</span>
-                </div>
+        <section class="contact-section">
+            <h3>Let's Connect</h3>
+            <p>I am actively seeking internship and professional opportunities. Whether you want to discuss mechanical design, robotics, or just talk about sports, feel free to reach out.</p>
+            <div class="contact-group">
+                <a href="mailto:w.siemens04@gmail.com" class="btn btn-primary">Email Me</a>
+                <a href="https://www.linkedin.com/in/will-siemens" target="_blank" class="btn btn-outline">LinkedIn Profile</a>
+                <a href="resume.pdf" target="_blank" class="btn btn-outline">View Resume</a>
             </div>
         </section>
 
-        <section id="about" class="about-section container">
-            <h2 class="section-title">About</h2>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>My background in engineering allows me to approach problems with a technical mindset, while my athletic career has reinforced the importance of discipline, resilience, and attention to detail. The pole vault is essentially a high-speed physics problem, requiring a balance of energy transfer, material mechanics, and precise timing.</p>
-                    <p>When I'm not in the CAD lab or on the track, you can find me backpacking and mountain biking with family and friends.</p>
-                    <br>
-                    <a href="track.html" class="btn-link">View Athletics &rarr;</a>
-                </div>
-                <div class="about-image-container">
-                    <img src="photos/Screenshot 2026-03-20 132517.png" alt="Will Siemens">
-                </div>
-            </div>
-        </section>
     </main>
-
-    <footer class="site-footer container">
-        <p>&copy; 2026 Will Siemens. Built in Berkeley, CA.</p>
-    </footer>
-
 </body>
 </html>
