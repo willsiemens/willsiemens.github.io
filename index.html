@@ -2,18 +2,22 @@
 <html lang="en">
 <head>
     <meta name="google-site-verification" content="UfdtEqzu0ASBTh023_EygdExWLab47RvDRDFBoRBcy4" />
-    <link rel="canonical" href="https://willsiemens.github.io/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Will Siemens</title>
     <meta name="description" content="Portfolio of Will Siemens, Mechanical Engineering undergraduate at UC Berkeley ('26) and Varsity Track & Field athlete. View my CAD, robotics, and manufacturing projects.">
-    <meta charset="UTF-8"><title>Home | Will Siemens</title>
+    <link rel="canonical" href="https://willsiemens.github.io/" />
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="sidebar">
-        <h1>Will Siemens</h1>
-        <span class="status">MechE @ UC Berkeley '26</span>
+        <div class="sidebar-header">
+            <h1>Will Siemens</h1>
+            <span class="status">MechE @ UC Berkeley '26</span>
+        </div>
         <ul class="nav-links">
-            <li><a href="index.html" style="color:var(--secondary); opacity:1;">Home</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
             <li class="nav-label">Projects</li>
             <li><a href="pegs.html">PeGS</a></li>
             <li><a href="dealer-bot.html">Dealer Bot</a></li>
@@ -24,54 +28,53 @@
             <li><a href="track.html">Track & Field</a></li>
         </ul>
     </nav>
+
     <main class="content">
         
-        <div style="text-align: center; margin-top: 3rem; margin-bottom: 5rem;">
-            <h2 style="font-size: 3.5rem; color: var(--primary, #1e293b); margin-bottom: 1rem; letter-spacing: -1px;">Will Siemens</h2>
-            <div style="width: 80px; height: 4px; background-color: var(--secondary, #2563eb); margin: 0 auto 1.5rem auto; border-radius: 2px;"></div>
-            <p style="font-size: 1.25rem; font-weight: 600; color: #475569; margin-bottom: 0.5rem;">Mechanical Engineering Undergraduate & D1 Student-Athlete</p>
-            <p style="color: #64748b; font-size: 1.1rem; margin-bottom: 0.5rem;">UC Berkeley | Class of 2026</p>
-            <p style="color: #64748b; font-weight: 600; background-color: #f1f5f9; display: inline-block; padding: 0.25rem 1rem; border-radius: 20px;">GPA: 3.96</p>
-        </div>
+        <section class="hero">
+            <h2>Will Siemens</h2>
+            <div class="divider"></div>
+            <p class="subtitle">Mechanical Engineering Undergraduate & D1 Student-Athlete</p>
+            <p class="location">UC Berkeley | Class of 2026</p>
+            <span class="badge">GPA: 3.96</span>
+        </section>
 
-        <div style="background-color: #5b7083; color: white; padding: 3.5rem; border-radius: 12px; display: flex; flex-wrap: wrap-reverse; gap: 4rem; align-items: center; margin-bottom: 5rem; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);">
-            
-            <div style="flex: 1; min-width: 300px;">
-                <h3 style="color: white; margin-top: 0; font-size: 2.2rem; border-bottom: 2px solid rgba(255,255,255,0.2); padding-bottom: 0.5rem; margin-bottom: 1.5rem;">About Me</h3>
-                <p style="color: rgba(255,255,255,0.9); line-height: 1.7; margin-bottom: 1.2rem; font-size: 1.05rem;">I am a mechanical engineering student at the University of California, Berkeley, and a varsity athlete on the Cal Track & Field team. Balancing high-level athletics with a rigorous engineering curriculum has instilled in me a relentless work ethic and the ability to perform under pressure.</p>
-                <p style="color: rgba(255,255,255,0.9); line-height: 1.7; margin-bottom: 1.2rem; font-size: 1.05rem;">I am deeply passionate about how things work. Whether it's finite element analysis, robotic mechatronics, or precision manufacturing, I love taking a project from a conceptual CAD model all the way through physical assembly and testing.</p>
-                <p style="color: rgba(255,255,255,0.9); line-height: 1.7; font-size: 1.05rem;">Outside of the classroom and the track, you can find me backpacking and mountain biking with family and friends. Ultimately, I want to leverage my engineering background to design technological advancements that tangibly improve our world.</p>
+        <section class="about-card">
+            <div class="about-text">
+                <h3>About Me</h3>
+                <p>I am a mechanical engineering student at the University of California, Berkeley, and a varsity athlete on the Cal Track & Field team. Balancing high-level athletics with a rigorous engineering curriculum has instilled in me a relentless work ethic and the ability to perform under pressure.</p>
+                <p>I am deeply passionate about how things work. Whether it's finite element analysis, robotic mechatronics, or precision manufacturing, I love taking a project from a conceptual CAD model all the way through physical assembly and testing.</p>
+                <p>Outside of the classroom and the track, you can find me backpacking and mountain biking with family and friends. Ultimately, I want to leverage my engineering background to design technological advancements that tangibly improve our world.</p>
             </div>
-            
-            <div style="flex: 0 0 320px; margin: 0 auto;">
-                <img src="photos/Screenshot 2026-03-20 132517.png" alt="Will Siemens Headshot" style="width: 100%; border-radius: 8px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.2), 0 10px 10px -5px rgba(0,0,0,0.04); border: 4px solid rgba(255,255,255,0.1);">
+            <div class="about-image">
+                <img src="photos/Screenshot 2026-03-20 132517.png" alt="Will Siemens Headshot">
             </div>
-        </div>
+        </section>
 
-        <div style="margin-bottom: 5rem;">
-            <h3 style="font-size: 2rem; color: var(--primary, #1e293b); border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; margin-bottom: 2rem;">Technical Core</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-                <div style="background-color: #f8fafc; padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0;">
-                    <h4 style="margin-top: 0; color: #334155; margin-bottom: 1rem;">Design & Analysis</h4>
-                    <ul style="list-style-type: none; padding: 0; margin: 0; color: #475569; line-height: 1.8;">
+        <section class="skills-section">
+            <h3>Technical Core</h3>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h4>Design & Analysis</h4>
+                    <ul>
                         <li>SolidWorks (3D CAD)</li>
                         <li>Finite Element Analysis (FEA)</li>
                         <li>Design for Manufacturing (DFM)</li>
                         <li>Rapid Prototyping</li>
                     </ul>
                 </div>
-                <div style="background-color: #f8fafc; padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0;">
-                    <h4 style="margin-top: 0; color: #334155; margin-bottom: 1rem;">Manufacturing</h4>
-                    <ul style="list-style-type: none; padding: 0; margin: 0; color: #475569; line-height: 1.8;">
+                <div class="skill-card">
+                    <h4>Manufacturing</h4>
+                    <ul>
                         <li>Laser Cutting & Sheet Metal</li>
                         <li>3D Printing (FDM)</li>
                         <li>Welding & Metal Fabrication</li>
                         <li>Pneumatic Systems Assembly</li>
                     </ul>
                 </div>
-                <div style="background-color: #f8fafc; padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0;">
-                    <h4 style="margin-top: 0; color: #334155; margin-bottom: 1rem;">Software & Electronics</h4>
-                    <ul style="list-style-type: none; padding: 0; margin: 0; color: #475569; line-height: 1.8;">
+                <div class="skill-card">
+                    <h4>Software & Electronics</h4>
+                    <ul>
                         <li>MATLAB</li>
                         <li>C++ / Microcontroller Programming</li>
                         <li>ESP32 & IoT Integration</li>
@@ -79,20 +82,17 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div style="padding-bottom: 4rem;">
-            <h3 style="font-size: 2rem; color: var(--primary, #1e293b); border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; margin-bottom: 1.5rem;">Let's Connect</h3>
-            <p style="margin-bottom: 2rem; font-size: 1.1rem; color: #475569;">I am actively seeking internship and professional opportunities. Whether you want to discuss mechanical design, robotics, or just talk about sports, feel free to reach out!</p>
-
-            <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: center;">
-                <a href="mailto:w.siemens04@gmail.com" style="background-color: #2563eb; color: white; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600; display: inline-block; transition: background-color 0.2s;">Email Me</a>
-                
-                <a href="https://www.linkedin.com/in/will-siemens" target="_blank" style="background-color: #0f172a; color: white; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600; display: inline-block; transition: background-color 0.2s;">LinkedIn</a>
-
-                <a href="resume.pdf" target="_blank" style="color: #2563eb; font-weight: 600; text-decoration: underline; margin-left: 1rem;">Download Full Resume (PDF)</a>
+        <section class="contact-section">
+            <h3>Let's Connect</h3>
+            <p>I am actively seeking internship and professional opportunities. Whether you want to discuss mechanical design, robotics, or just talk about sports, feel free to reach out!</p>
+            <div class="button-group">
+                <a href="mailto:w.siemens04@gmail.com" class="btn btn-primary">Email Me</a>
+                <a href="https://www.linkedin.com/in/will-siemens" target="_blank" class="btn btn-dark">LinkedIn</a>
+                <a href="resume.pdf" target="_blank" class="link-resume">Download Full Resume (PDF)</a>
             </div>
-        </div>
+        </section>
 
     </main>
 </body>
