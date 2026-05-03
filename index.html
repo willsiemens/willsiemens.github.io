@@ -12,6 +12,109 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+
+    <style>
+        /* Index-only hero fixes */
+        .home-hero.home-hero-split {
+            display: grid !important;
+            grid-template-columns: minmax(0, 720px) minmax(280px, 390px) !important;
+            gap: clamp(2rem, 6vw, 5rem);
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .home-hero-split .home-copy {
+            max-width: 720px;
+        }
+
+        .home-hero-split .home-title {
+            font-size: clamp(4rem, 8vw, 7.1rem);
+            line-height: 0.9;
+            letter-spacing: -0.065em;
+            margin-bottom: 1.15rem;
+            max-width: 780px;
+        }
+
+        .home-hero-split .home-title span {
+            display: inline !important;
+        }
+
+        .home-hero-split .home-title .name-gold {
+            color: var(--gold-deep);
+        }
+
+        .home-hero-split .lede {
+            max-width: 690px;
+        }
+
+        .home-hero-split .home-portrait {
+            justify-self: end;
+            width: min(100%, 390px);
+        }
+
+        .home-hero-split .portrait-frame {
+            padding: 0.55rem;
+        }
+
+        .home-hero-split .portrait-frame img {
+            width: 100%;
+            height: clamp(360px, 48vh, 500px);
+            object-fit: cover;
+            object-position: center 16%;
+            display: block;
+        }
+
+        .compact-contact {
+            padding: clamp(1.15rem, 2.5vw, 1.8rem);
+        }
+
+        .compact-contact h2 {
+            font-size: clamp(1.35rem, 2.4vw, 2rem);
+            line-height: 1.12;
+            max-width: 760px;
+        }
+
+        .compact-contact p {
+            font-size: 0.94rem;
+            line-height: 1.65;
+        }
+
+        .compact-contact .eyebrow {
+            font-size: 0.68rem;
+            margin-bottom: 0.55rem;
+        }
+
+        .compact-contact .btn {
+            font-size: 0.86rem;
+            padding: 0.72rem 1rem;
+        }
+
+        @media (max-width: 1020px) {
+            .home-hero.home-hero-split {
+                grid-template-columns: 1fr !important;
+            }
+
+            .home-hero-split .home-portrait {
+                justify-self: start;
+                width: min(100%, 360px);
+            }
+
+            .home-hero-split .portrait-frame img {
+                height: auto;
+                aspect-ratio: 4 / 5;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .home-hero-split .home-title {
+                font-size: clamp(3.2rem, 17vw, 5.2rem);
+            }
+
+            .home-hero-split .home-portrait {
+                width: min(100%, 320px);
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="site-header">
@@ -33,10 +136,10 @@
     </header>
 
     <main class="page-shell">
-        <section class="home-hero">
+        <section class="home-hero home-hero-split">
             <div class="home-copy">
                 <p class="eyebrow">UC Berkeley · Mechanical Engineering · Class of 2026</p>
-                <h1 class="home-title"><span>Will</span><span>Siemens</span></h1>
+                <h1 class="home-title">Will <span class="name-gold">Siemens</span></h1>
                 <p class="home-subtitle">Mechanical design, manufacturing, and mechatronics portfolio.</p>
                 <p class="lede">I build hardware from early concept through CAD, analysis, prototyping, manufacturing, and test. My work spans robotics, embedded systems, granular mechanics research, and performance-driven athletics.</p>
                 <p class="credential-line">SolidWorks + FEA <span>/</span> ESP32 controls <span>/</span> DFM and prototyping <span>/</span> Cal pole vault</p>
@@ -46,6 +149,7 @@
                     <a class="btn btn-secondary" href="https://www.linkedin.com/in/will-siemens" target="_blank" rel="noopener">LinkedIn</a>
                 </div>
             </div>
+
             <div class="home-portrait" aria-label="Portrait of Will Siemens">
                 <div class="portrait-frame">
                     <img src="photos/Screenshot 2026-03-20 132517.png" alt="Will Siemens headshot">
@@ -161,7 +265,7 @@
             </div>
         </section>
 
-        <section class="section contact-card">
+        <section class="section contact-card compact-contact">
             <div>
                 <p class="eyebrow">Connect</p>
                 <h2>Let’s talk mechanical design, robotics, or manufacturing.</h2>
