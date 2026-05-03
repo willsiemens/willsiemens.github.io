@@ -4,12 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dealer Bot | Will Siemens</title>
-    <meta name="description" content="Automated dealer bot mechatronics project by Will Siemens, integrating mechanical dispensing, motors, and embedded control.">
+    <meta name="description" content="Automated dealer bot mechatronics project by Will Siemens, integrating mechanical dispensing, motors, transmission systems, and embedded control.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+
+    <style>
+        /* Dealer Bot page-only video styling */
+        .demo-video-box {
+            background: linear-gradient(180deg, rgba(16, 41, 70, 0.86), rgba(11, 29, 50, 0.94));
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            padding: 0.8rem;
+            overflow: hidden;
+        }
+
+        .demo-video-box video {
+            width: 100%;
+            display: block;
+            border-radius: var(--radius-sm);
+            background: #071523;
+            border: 1px solid rgba(179, 194, 218, 0.18);
+            max-height: 660px;
+            object-fit: contain;
+        }
+
+        .demo-video-box .caption {
+            margin-top: 0.8rem;
+        }
+
+        .dealer-highlight {
+            border-left: 3px solid var(--california-gold);
+        }
+    </style>
 </head>
 <body>
     <header class="site-header">
@@ -40,11 +70,30 @@
                     <span class="meta-pill">Stepper motors</span>
                     <span class="meta-pill">Servo control</span>
                     <span class="meta-pill">SolidWorks</span>
+                    <span class="meta-pill">Gear transmission</span>
+                    <span class="meta-pill">Belt drive</span>
                 </div>
                 <p class="lede">An automated card-dealing robot designed to dispense playing cards with repeatable feeding, controlled trajectory, and reliable player-to-player distribution.</p>
             </div>
             <div class="project-media contain">
                 <img src="photos/Screenshot 2026-03-20 115500.png" alt="Dealer bot CAD or prototype image">
+            </div>
+        </section>
+
+        <section class="section-tight">
+            <div class="section-header">
+                <div>
+                    <p class="eyebrow">Demo</p>
+                    <h2>Card dealing system in motion</h2>
+                </div>
+            </div>
+
+            <div class="demo-video-box">
+                <video controls preload="metadata" playsinline>
+                    <source src="photos/Demo.MOV" type="video/quicktime">
+                    Your browser does not support this video format. Try converting Demo.MOV to Demo.mp4 and updating the source path.
+                </video>
+                <p class="caption"><strong>Demo:</strong> Automated dealer bot prototype demonstrating card feed, actuation, and deal motion.</p>
             </div>
         </section>
 
@@ -54,7 +103,7 @@
             </div>
             <div>
                 <p>This project focuses on integrating a moving mechanical assembly with microcontroller-driven logic. The core challenge is to separate a single card from a stack, move it into a controlled eject position, and direct it toward the correct player location.</p>
-                <p>The build combines mechanical design, rapid prototyping, motor control, web-based interaction, and iterative testing. The current system is still being refined, with emphasis on reliability, repeatability, and smooth actuation.</p>
+                <p>The build combines mechanical design, rapid prototyping, motor control, transmission design, web-based interaction, and iterative testing. The current system is still being refined, with emphasis on reliability, repeatability, and smooth actuation.</p>
             </div>
         </section>
 
@@ -70,6 +119,10 @@
                     <h4>Mechanical dispensing</h4>
                     <p>Engineered a friction-based roller and feed concept to separate and deal single cards from a standard deck while reducing jams. The chassis and brackets were modeled in SolidWorks and 3D printed.</p>
                 </div>
+                <div class="spec-box dealer-highlight">
+                    <h4>Transmission systems</h4>
+                    <p>Used gear trains and belt drive systems as the main mechanical transmission methods to transfer motor output into controlled hopper movement, pusher motion, and card feed behavior.</p>
+                </div>
                 <div class="spec-box">
                     <h4>Motion control</h4>
                     <p>Used stepper motors, servo mechanisms, and controlled DC motor output to manage hopper motion, pusher motion, base rotation, and card ejection.</p>
@@ -77,6 +130,14 @@
                 <div class="spec-box">
                     <h4>Embedded logic</h4>
                     <p>Built microcontroller logic for commands, homing routines, calibration, game flow, and repeatable card-dealing sequences across multiple player positions.</p>
+                </div>
+                <div class="spec-box">
+                    <h4>Calibration workflow</h4>
+                    <p>Designed the control logic around repeatable setup routines so player positions, card ejection behavior, and mechanical limits can be adjusted during testing.</p>
+                </div>
+                <div class="spec-box">
+                    <h4>Prototype iteration</h4>
+                    <p>Refined the system through repeated mechanical testing, debugging, and design updates to improve feeding reliability and reduce missed motion events.</p>
                 </div>
             </div>
         </section>
@@ -87,6 +148,7 @@
                 <ul class="clean-list">
                     <li>Separating one card at a time without double-feeding.</li>
                     <li>Maintaining repeatable motion across different deal distances.</li>
+                    <li>Coordinating gear, belt, and roller-driven motion with software timing.</li>
                     <li>Coordinating mechanical tolerances with software timing.</li>
                     <li>Designing a control system that is easy to calibrate and test.</li>
                 </ul>
@@ -94,7 +156,7 @@
             <div class="feature-panel">
                 <h3>Current direction</h3>
                 <p>The next phase is focused on improving robustness through consistent motor drive logic, cleaner homing behavior, and a more polished user interface for game setup and calibration.</p>
-                <p>The project has become a strong test bed for mechanical iteration, embedded controls, and practical debugging under real hardware constraints.</p>
+                <p>The project has become a strong test bed for mechanical iteration, embedded controls, transmission design, and practical debugging under real hardware constraints.</p>
             </div>
         </section>
     </main>
