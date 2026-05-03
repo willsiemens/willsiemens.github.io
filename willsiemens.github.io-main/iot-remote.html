@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Remote | Will Siemens</title>
+    <meta name="description" content="IoT remote project by Will Siemens and Truman O'Brien for wireless control of an Audioengine A5+ speaker set.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav-shell" aria-label="Primary navigation">
+            <a class="brand" href="index.html">
+                <span class="brand-name">Will Siemens</span>
+                <span class="brand-tagline">Mechanical Engineer</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pegs.html">PeGS</a></li>
+                <li><a href="dealer-bot.html">Dealer Bot</a></li>
+                <li><a class="active" href="iot-remote.html" aria-current="page">IoT Remote</a></li>
+                <li><a href="saturday-projects.html">Saturday</a></li>
+                <li><a href="wind-turbine.html">Wind Turbine</a></li>
+                <li><a href="track.html">Track</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-shell">
+        <section class="project-hero reverse">
+            <div class="project-copy">
+                <p class="eyebrow">Electronics and IoT class project, Spring 2025</p>
+                <h1>IoT Speaker Remote</h1>
+                <div class="project-meta">
+                    <span class="meta-pill">With Truman O'Brien</span>
+                    <span class="meta-pill">ESP32</span>
+                    <span class="meta-pill">Wi-Fi protocol</span>
+                    <span class="meta-pill">Low-power design</span>
+                </div>
+                <p class="lede">A custom wireless remote and embedded speaker-side controller built to replace the unavailable infrared remote for an Audioengine A5+ speaker set.</p>
+            </div>
+            <div class="project-media contain">
+                <img src="photos/ME100Remotewhite-edited.jpg" alt="Custom IoT remote">
+            </div>
+        </section>
+
+        <section class="two-column section-tight">
+            <div>
+                <h2>Project overview</h2>
+            </div>
+            <div>
+                <p>Our solution replaced the original IR interface with an ESP32-based IoT system that enables real-time, bidirectional communication between a 3D-printed handheld remote and a custom controller embedded within the speaker.</p>
+                <p>The remote features a rotary encoder for volume and mute control, a low-power alphanumeric display, and a sleep mode that substantially reduces power draw during inactivity.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="specs-grid">
+                <div class="spec-box">
+                    <h4>Speaker-side controller</h4>
+                    <p>Intercepts and emulates encoder signals to adjust volume through GPIO while preserving compatibility with the original analog control circuit.</p>
+                </div>
+                <div class="spec-box">
+                    <h4>Handheld remote</h4>
+                    <p>Uses a rotary encoder, compact display, and low-power firmware to create a durable and modern replacement for the original remote.</p>
+                </div>
+                <div class="spec-box">
+                    <h4>Wireless communication</h4>
+                    <p>Handles communication over Wi-Fi using a custom message protocol with input queuing for reliability and responsive volume changes.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section two-column">
+            <div class="feature-panel">
+                <h3>Engineering challenges</h3>
+                <ul class="clean-list">
+                    <li>Reverse-engineering the speaker’s internal control logic.</li>
+                    <li>Implementing robust low-power firmware for long recharge intervals.</li>
+                    <li>Synchronizing physical and digital volume states.</li>
+                    <li>Packaging the electronics in a clean, ergonomic enclosure.</li>
+                </ul>
+            </div>
+            <div class="image-box">
+                <img src="photos/IMG_8892-768x1024.jpg" alt="Debugging receiver firmware on a breadboard">
+                <p class="caption"><strong>Fig. 1:</strong> Debugging receiver firmware using a breadboard.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-shell">
+            <span>© 2026 Will Siemens</span>
+            <span><a href="index.html">Back to home</a></span>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PeGS | Will Siemens</title>
+    <meta name="description" content="Photoelastic Grain Solver research project by Will Siemens, focused on MATLAB optimization for granular material force extraction.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav-shell" aria-label="Primary navigation">
+            <a class="brand" href="index.html">
+                <span class="brand-name">Will Siemens</span>
+                <span class="brand-tagline">Mechanical Engineer</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="pegs.html" aria-current="page">PeGS</a></li>
+                <li><a href="dealer-bot.html">Dealer Bot</a></li>
+                <li><a href="iot-remote.html">IoT Remote</a></li>
+                <li><a href="saturday-projects.html">Saturday</a></li>
+                <li><a href="wind-turbine.html">Wind Turbine</a></li>
+                <li><a href="track.html">Track</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-shell">
+        <section class="project-hero">
+            <div class="project-copy">
+                <p class="eyebrow">Research group project, 2024 to ongoing</p>
+                <h1>Photoelastic Grain Solver</h1>
+                <div class="project-meta">
+                    <span class="meta-pill">Kamrin Group</span>
+                    <span class="meta-pill">MATLAB</span>
+                    <span class="meta-pill">Optimization</span>
+                    <span class="meta-pill">Granular mechanics</span>
+                </div>
+                <p class="lede">PeGS is a MATLAB-based tool for extracting per-particle contact force measurements from photoelastic granular material images and videos.</p>
+            </div>
+            <div class="project-media">
+                <img src="photos/hopper1-1024x640.png" alt="Photoelastic granular material hopper">
+            </div>
+        </section>
+
+        <section class="two-column section-tight">
+            <div>
+                <h2>Project overview</h2>
+            </div>
+            <div>
+                <p>The Photoelastic Grain Solver compares experimental fringe patterns to simulated patterns generated from hypothesized force configurations. The solver then uses nonlinear optimization to adjust the force configurations and minimize the difference between the observed and simulated images.</p>
+                <p>Transparent, birefringent disks placed between crossed polarizing filters produce light interference patterns when subjected to stress. The intensity and geometry of these fringes reflect each particle’s internal stress distribution.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="image-box">
+                <img src="photos/Diametric-Load-1024x717.png" alt="Fringe pattern comparison for a diametric load case">
+                <p class="caption"><strong>Fig. 1:</strong> Fringe in 1.4 N diametric load case. PeGS force solution within 3 percent of applied force. Kamrin Group, unpublished data.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <div>
+                    <p class="eyebrow">Contributions</p>
+                    <h2>Engineering improvements</h2>
+                </div>
+            </div>
+            <p>Under Professor Kenneth Kamrin, my research partner Truman O'Brien and I developed algorithmic improvements to increase PeGS computational efficiency and force solution accuracy.</p>
+            <div class="specs-grid">
+                <div class="spec-box">
+                    <h4>Analytic gradient integration</h4>
+                    <p>Derived and incorporated an analytic expression for the gradient of the solver’s error function, replacing MATLAB’s default finite-difference approximation and reducing computational cost per optimization step.</p>
+                </div>
+                <div class="spec-box">
+                    <h4>Image multi-scaling framework</h4>
+                    <p>Introduced a method that begins optimization at a lower image resolution and incrementally refines the solution at higher resolutions, reducing solve time while preserving force accuracy.</p>
+                </div>
+                <div class="spec-box">
+                    <h4>Multi-particle solver direction</h4>
+                    <p>Developing a routine that solves multiple particles simultaneously by incorporating force balance and Newton’s third law constraints to improve dense-packing consistency.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section media-grid">
+            <div class="image-box">
+                <img src="photos/Screenshot-2026-02-08-111845-1024x501.png" alt="PeGS solver routine graphic">
+                <p class="caption"><strong>Fig. 2:</strong> PeGS solver routine graphic. Truman O’Brien.</p>
+            </div>
+            <div class="image-box">
+                <img src="photos/basket_1_fringe-300x300.png" alt="Simulated network fringe pattern">
+                <p class="caption"><strong>Fig. 3:</strong> Simulated network fringe pattern. Kamrin Group, unpublished data.</p>
+            </div>
+        </section>
+
+        <section class="section two-column">
+            <div class="image-box">
+                <img src="photos/basket_1_video.gif" alt="DEM simulation used to generate a packing">
+                <p class="caption"><strong>Fig. 4:</strong> DEM simulation used to generate packing. Kamrin Group, unpublished data.</p>
+            </div>
+            <div class="credit-block">
+                <h4>Image credits</h4>
+                <p>Fig. hero: Photoelastic fringe patterns in stressed granular material. Ongoing research by Nathalie Vriend and Benjamin McMillan, 2025.</p>
+                <p>Fig. 1: Fringe pattern for a 1.4 N diametric load case. Kamrin Group, unpublished data, 2025.</p>
+                <p>Fig. 2: PeGS solver routine graphic. Truman O’Brien, 2025.</p>
+                <p>Fig. 3 and Fig. 4: Simulated network fringe pattern and DEM simulation. Kamrin Group, unpublished data, 2025.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-shell">
+            <span>© 2026 Will Siemens</span>
+            <span><a href="index.html">Back to home</a></span>
+        </div>
+    </footer>
+</body>
+</html>

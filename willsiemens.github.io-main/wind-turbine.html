@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wind Turbine | Will Siemens</title>
+    <meta name="description" content="Wind turbine design and prototyping project by Will Siemens, including CAD, FEA, blade design, and physical testing.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav-shell" aria-label="Primary navigation">
+            <a class="brand" href="index.html">
+                <span class="brand-name">Will Siemens</span>
+                <span class="brand-tagline">Mechanical Engineer</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pegs.html">PeGS</a></li>
+                <li><a href="dealer-bot.html">Dealer Bot</a></li>
+                <li><a href="iot-remote.html">IoT Remote</a></li>
+                <li><a href="saturday-projects.html">Saturday</a></li>
+                <li><a class="active" href="wind-turbine.html" aria-current="page">Wind Turbine</a></li>
+                <li><a href="track.html">Track</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-shell">
+        <section class="project-hero reverse">
+            <div class="project-copy">
+                <p class="eyebrow">CAD class project, Fall 2022</p>
+                <h1>Wind Turbine Design and Prototyping</h1>
+                <div class="project-meta">
+                    <span class="meta-pill">CAD</span>
+                    <span class="meta-pill">FEA</span>
+                    <span class="meta-pill">3D printing</span>
+                    <span class="meta-pill">Testing</span>
+                </div>
+                <p class="lede">A model wind turbine project covering the full engineering design cycle from brainstorming and 3D modeling to rapid prototyping and empirical testing.</p>
+            </div>
+            <div class="project-media contain">
+                <img src="photos/turbine-rotor-cad.jpg" alt="Wind turbine rotor CAD model">
+            </div>
+        </section>
+
+        <section class="two-column section-tight">
+            <div>
+                <h2>Project overview</h2>
+            </div>
+            <div>
+                <p>For this freshman engineering project, I collaborated with a small team to design, prototype, and test a 3D-printed model wind turbine. We evaluated both blade power output and tower structural integrity.</p>
+                <p>The project served as a hands-on introduction to CAD, FEA, design constraints, manufacturing limitations, and iterative physical testing.</p>
+            </div>
+        </section>
+
+        <section class="section media-grid">
+            <div class="image-box">
+                <img src="photos/turbine-prototype.jpg" alt="Wind turbine prototype testing">
+                <p class="caption">Prototype testing setup.</p>
+            </div>
+            <div class="image-box">
+                <img src="photos/turbine-blade-profile.jpg" alt="Wind turbine blade side profile CAD">
+                <p class="caption">Blade side-profile CAD work.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="specs-grid">
+                <div class="spec-box">
+                    <h4>Blade design and manufacturing</h4>
+                    <p>Led aerodynamic blade design and 3D printing, researching profiles that could maximize power generation during testing.</p>
+                </div>
+                <div class="spec-box">
+                    <h4>Structural CAD</h4>
+                    <p>Designed and printed the bottom section of the turbine base while working within strict material and height constraints.</p>
+                </div>
+                <div class="spec-box">
+                    <h4>Project management</h4>
+                    <p>Acted as team facilitator by assigning workloads, managing deadlines, and supporting an equitable distribution of tasks.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section two-column">
+            <div class="feature-panel">
+                <h3>Constraints and challenges</h3>
+                <ul class="clean-list">
+                    <li>The tower base needed to reach 16 inches using a maximum of 17 cubic inches of ABS plastic.</li>
+                    <li>Printer volume constraints required the base to be designed as two separate 8-inch assemblies.</li>
+                    <li>The team overcame an initial knowledge gap in wind turbine physics through research and iteration.</li>
+                </ul>
+            </div>
+            <div class="image-box">
+                <img src="photos/turbine-fea.jpg" alt="Tower FEA analysis showing stress concentration">
+                <p class="caption">FEA showing stress concentration in the upper tower half.</p>
+            </div>
+        </section>
+
+        <section class="section two-column">
+            <div>
+                <p class="eyebrow">Results</p>
+                <h2>Testing drove the next design iteration.</h2>
+            </div>
+            <div>
+                <p>The final blade design performed well and produced high power output during physical testing. However, FEA and applied horizontal load testing showed that the tower structure lacked support in the upper half.</p>
+                <p>For a future iteration, I would redesign the tower with a thicker, more compact truss structure to better withstand wind forces and bending moments.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-shell">
+            <span>© 2026 Will Siemens</span>
+            <span><a href="index.html">Back to home</a></span>
+        </div>
+    </footer>
+</body>
+</html>

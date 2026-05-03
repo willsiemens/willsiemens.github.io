@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dealer Bot | Will Siemens</title>
+    <meta name="description" content="Automated dealer bot mechatronics project by Will Siemens, integrating mechanical dispensing, motors, and embedded control.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav-shell" aria-label="Primary navigation">
+            <a class="brand" href="index.html">
+                <span class="brand-name">Will Siemens</span>
+                <span class="brand-tagline">Mechanical Engineer</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pegs.html">PeGS</a></li>
+                <li><a class="active" href="dealer-bot.html" aria-current="page">Dealer Bot</a></li>
+                <li><a href="iot-remote.html">IoT Remote</a></li>
+                <li><a href="saturday-projects.html">Saturday</a></li>
+                <li><a href="wind-turbine.html">Wind Turbine</a></li>
+                <li><a href="track.html">Track</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-shell">
+        <section class="project-hero reverse">
+            <div class="project-copy">
+                <p class="eyebrow">In progress, automated mechatronics system</p>
+                <h1>Dealer Bot</h1>
+                <div class="project-meta">
+                    <span class="meta-pill">ESP32</span>
+                    <span class="meta-pill">Stepper motors</span>
+                    <span class="meta-pill">Servo control</span>
+                    <span class="meta-pill">SolidWorks</span>
+                </div>
+                <p class="lede">An automated card-dealing robot designed to dispense playing cards with repeatable feeding, controlled trajectory, and reliable player-to-player distribution.</p>
+            </div>
+            <div class="project-media contain">
+                <img src="photos/Screenshot 2026-03-20 115500.png" alt="Dealer bot CAD or prototype image">
+            </div>
+        </section>
+
+        <section class="two-column section-tight">
+            <div>
+                <h2>System goal</h2>
+            </div>
+            <div>
+                <p>This project focuses on integrating a moving mechanical assembly with microcontroller-driven logic. The core challenge is to separate a single card from a stack, move it into a controlled eject position, and direct it toward the correct player location.</p>
+                <p>The build combines mechanical design, rapid prototyping, motor control, web-based interaction, and iterative testing. The current system is still being refined, with emphasis on reliability, repeatability, and smooth actuation.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <div>
+                    <p class="eyebrow">Subsystems</p>
+                    <h2>Mechanical and controls architecture</h2>
+                </div>
+            </div>
+            <div class="specs-grid">
+                <div class="spec-box">
+                    <h4>Mechanical dispensing</h4>
+                    <p>Engineered a friction-based roller and feed concept to separate and deal single cards from a standard deck while reducing jams. The chassis and brackets were modeled in SolidWorks and 3D printed.</p>
+                </div>
+                <div class="spec-box">
+                    <h4>Motion control</h4>
+                    <p>Used stepper motors, servo mechanisms, and controlled DC motor output to manage hopper motion, pusher motion, base rotation, and card ejection.</p>
+                </div>
+                <div class="spec-box">
+                    <h4>Embedded logic</h4>
+                    <p>Built microcontroller logic for commands, homing routines, calibration, game flow, and repeatable card-dealing sequences across multiple player positions.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section two-column">
+            <div class="feature-panel">
+                <h3>Key engineering challenges</h3>
+                <ul class="clean-list">
+                    <li>Separating one card at a time without double-feeding.</li>
+                    <li>Maintaining repeatable motion across different deal distances.</li>
+                    <li>Coordinating mechanical tolerances with software timing.</li>
+                    <li>Designing a control system that is easy to calibrate and test.</li>
+                </ul>
+            </div>
+            <div class="feature-panel">
+                <h3>Current direction</h3>
+                <p>The next phase is focused on improving robustness through consistent motor drive logic, cleaner homing behavior, and a more polished user interface for game setup and calibration.</p>
+                <p>The project has become a strong test bed for mechanical iteration, embedded controls, and practical debugging under real hardware constraints.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-shell">
+            <span>© 2026 Will Siemens</span>
+            <span><a href="index.html">Back to home</a></span>
+        </div>
+    </footer>
+</body>
+</html>
