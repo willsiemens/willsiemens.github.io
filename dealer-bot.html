@@ -13,6 +13,13 @@
 
     <style>
         /* Dealer Bot page-only video styling */
+        .demo-video-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+            align-items: start;
+        }
+
         .demo-video-box {
             background: linear-gradient(180deg, rgba(16, 41, 70, 0.86), rgba(11, 29, 50, 0.94));
             border: 1px solid var(--line);
@@ -28,16 +35,30 @@
             border-radius: var(--radius-sm);
             background: #071523;
             border: 1px solid rgba(179, 194, 218, 0.18);
-            max-height: 660px;
+            max-height: 560px;
             object-fit: contain;
         }
 
-        .demo-video-box .caption {
-            margin-top: 0.8rem;
+        .demo-video-box h3 {
+            margin-top: 0.9rem;
+            margin-bottom: 0.4rem;
+            color: var(--gold-soft);
+        }
+
+        .demo-video-box p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            color: var(--muted);
         }
 
         .dealer-highlight {
             border-left: 3px solid var(--california-gold);
+        }
+
+        @media (max-width: 800px) {
+            .demo-video-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -84,16 +105,28 @@
             <div class="section-header">
                 <div>
                     <p class="eyebrow">Demo</p>
-                    <h2>Card dealing system in motion</h2>
+                    <h2>Dealer bot prototype in motion</h2>
                 </div>
             </div>
 
-            <div class="demo-video-box">
-                <video controls preload="metadata" playsinline>
-                    <source src="photos/Demo.MOV" type="video/quicktime">
-                    Your browser does not support this video format. Try converting Demo.MOV to Demo.mp4 and updating the source path.
-                </video>
-                <p class="caption"><strong>Demo:</strong> Automated dealer bot prototype demonstrating card feed, actuation, and deal motion.</p>
+            <div class="demo-video-grid">
+                <div class="demo-video-box">
+                    <video controls preload="metadata" playsinline>
+                        <source src="photos/shuffling.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h3>Shuffling sequence</h3>
+                    <p>Prototype demonstration of the hopper and card organization sequence before dealing.</p>
+                </div>
+
+                <div class="demo-video-box">
+                    <video controls preload="metadata" playsinline>
+                        <source src="photos/dealing.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h3>Dealing sequence</h3>
+                    <p>Prototype demonstration of the card feed, ejection, and player-to-player dealing motion.</p>
+                </div>
             </div>
         </section>
 
@@ -119,22 +152,27 @@
                     <h4>Mechanical dispensing</h4>
                     <p>Engineered a friction-based roller and feed concept to separate and deal single cards from a standard deck while reducing jams. The chassis and brackets were modeled in SolidWorks and 3D printed.</p>
                 </div>
+
                 <div class="spec-box dealer-highlight">
                     <h4>Transmission systems</h4>
-                    <p>Used gear trains and belt drive systems as the main mechanical transmission methods to transfer motor output into controlled hopper movement, pusher motion, and card feed behavior.</p>
+                    <p>Used gear trains and belt drive systems as the main mechanical transmission methods to transfer motor output into controlled hopper movement, pusher motion, card feeding, and rotational positioning.</p>
                 </div>
+
                 <div class="spec-box">
                     <h4>Motion control</h4>
                     <p>Used stepper motors, servo mechanisms, and controlled DC motor output to manage hopper motion, pusher motion, base rotation, and card ejection.</p>
                 </div>
+
                 <div class="spec-box">
                     <h4>Embedded logic</h4>
                     <p>Built microcontroller logic for commands, homing routines, calibration, game flow, and repeatable card-dealing sequences across multiple player positions.</p>
                 </div>
+
                 <div class="spec-box">
                     <h4>Calibration workflow</h4>
                     <p>Designed the control logic around repeatable setup routines so player positions, card ejection behavior, and mechanical limits can be adjusted during testing.</p>
                 </div>
+
                 <div class="spec-box">
                     <h4>Prototype iteration</h4>
                     <p>Refined the system through repeated mechanical testing, debugging, and design updates to improve feeding reliability and reduce missed motion events.</p>
@@ -153,6 +191,7 @@
                     <li>Designing a control system that is easy to calibrate and test.</li>
                 </ul>
             </div>
+
             <div class="feature-panel">
                 <h3>Current direction</h3>
                 <p>The next phase is focused on improving robustness through consistent motor drive logic, cleaner homing behavior, and a more polished user interface for game setup and calibration.</p>
