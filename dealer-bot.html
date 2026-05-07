@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dealer Bot | Will Siemens</title>
-    <meta name="description" content="Automated dealer bot mechatronics project by Will Siemens, integrating mechanical dispensing, motors, transmission systems, and embedded control.">
+    <meta name="description" content="Automated dealer bot mechatronics project by Will Siemens, integrating mechanical dispensing, motors, gear and belt transmission systems, and embedded control.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
@@ -12,7 +12,7 @@
     <script src="script.js" defer></script>
 
     <style>
-        /* Dealer Bot page-only video styling */
+        /* Dealer Bot page-only styling */
         .demo-video-grid {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -20,7 +20,8 @@
             align-items: start;
         }
 
-        .demo-video-box {
+        .demo-video-box,
+        .annotation-wheel-card {
             background: linear-gradient(180deg, rgba(16, 41, 70, 0.86), rgba(11, 29, 50, 0.94));
             border: 1px solid var(--line);
             border-radius: var(--radius);
@@ -55,9 +56,158 @@
             border-left: 3px solid var(--california-gold);
         }
 
+        .annotation-wheel {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(250px, 0.38fr);
+            gap: 1rem;
+            align-items: stretch;
+        }
+
+        .annotation-stage {
+            position: relative;
+            min-height: 420px;
+            background: #071523;
+            border: 1px solid rgba(179, 194, 218, 0.18);
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+        }
+
+        .annotation-slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transform: scale(1.015);
+            transition: opacity 0.45s ease, transform 0.45s ease;
+            pointer-events: none;
+        }
+
+        .annotation-slide.is-active {
+            opacity: 1;
+            transform: scale(1);
+            pointer-events: auto;
+        }
+
+        .annotation-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: #071523;
+        }
+
+        .annotation-controls {
+            position: absolute;
+            inset: auto 0.8rem 0.8rem 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            pointer-events: none;
+        }
+
+        .annotation-button {
+            pointer-events: auto;
+            appearance: none;
+            border: 1px solid rgba(253, 181, 21, 0.4);
+            background: rgba(7, 21, 35, 0.88);
+            color: var(--gold-soft);
+            border-radius: var(--radius-sm);
+            min-width: 2.65rem;
+            min-height: 2.65rem;
+            font-size: 1.35rem;
+            font-weight: 900;
+            cursor: pointer;
+            transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+        }
+
+        .annotation-button:hover {
+            transform: translateY(-2px);
+            background: rgba(253, 181, 21, 0.14);
+            border-color: var(--california-gold);
+        }
+
+        .annotation-caption-panel {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-left: 3px solid var(--california-gold);
+            padding: 1.15rem;
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .annotation-caption-panel h3 {
+            color: var(--gold-soft);
+            margin-bottom: 0.65rem;
+        }
+
+        .annotation-caption-panel p {
+            color: var(--ink-soft);
+            font-size: 0.94rem;
+        }
+
+        .annotation-count {
+            color: var(--muted);
+            font-size: 0.78rem;
+            font-weight: 900;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            margin-bottom: 0.65rem;
+        }
+
+        .annotation-thumbs {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 0.45rem;
+            margin-top: 1rem;
+        }
+
+        .annotation-thumb {
+            appearance: none;
+            padding: 0;
+            border: 1px solid rgba(179, 194, 218, 0.2);
+            background: #071523;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            cursor: pointer;
+            opacity: 0.62;
+            transition: opacity 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+        }
+
+        .annotation-thumb:hover,
+        .annotation-thumb.is-active {
+            opacity: 1;
+            border-color: var(--california-gold);
+            transform: translateY(-1px);
+        }
+
+        .annotation-thumb img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+
+        @media (max-width: 920px) {
+            .annotation-wheel {
+                grid-template-columns: 1fr;
+            }
+
+            .annotation-stage {
+                min-height: 360px;
+            }
+        }
+
         @media (max-width: 800px) {
             .demo-video-grid {
                 grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 620px) {
+            .annotation-stage {
+                min-height: 280px;
+            }
+
+            .annotation-thumbs {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
             }
         }
     </style>
@@ -84,7 +234,7 @@
     <main class="page-shell">
         <section class="project-hero reverse">
             <div class="project-copy">
-                <p class="eyebrow">In progress, automated mechatronics system</p>
+                <p class="eyebrow">Completed automated mechatronics system</p>
                 <h1>Dealer Bot</h1>
                 <div class="project-meta">
                     <span class="meta-pill">ESP32</span>
@@ -94,7 +244,7 @@
                     <span class="meta-pill">Gear transmission</span>
                     <span class="meta-pill">Belt drive</span>
                 </div>
-                <p class="lede">An automated card-dealing robot designed to dispense playing cards with repeatable feeding, controlled trajectory, and reliable player-to-player distribution.</p>
+                <p class="lede">A fully assembled automated card-dealing robot built to shuffle, organize, and dispense playing cards with repeatable feeding, controlled trajectory, and reliable player-to-player distribution.</p>
             </div>
             <div class="project-media contain">
                 <img src="photos/Screenshot 2026-03-20 115500.png" alt="Dealer bot CAD or prototype image">
@@ -105,7 +255,7 @@
             <div class="section-header">
                 <div>
                     <p class="eyebrow">Demo</p>
-                    <h2>Dealer bot prototype in motion</h2>
+                    <h2>Dealer bot in motion</h2>
                 </div>
             </div>
 
@@ -116,7 +266,7 @@
                         Your browser does not support the video tag.
                     </video>
                     <h3>Shuffling sequence</h3>
-                    <p>Prototype demonstration of the hopper and card organization sequence before dealing.</p>
+                    <p>Demonstrates the hopper and card organization sequence before the dealing routine begins.</p>
                 </div>
 
                 <div class="demo-video-box">
@@ -125,7 +275,69 @@
                         Your browser does not support the video tag.
                     </video>
                     <h3>Dealing sequence</h3>
-                    <p>Prototype demonstration of the card feed, ejection, and player-to-player dealing motion.</p>
+                    <p>Demonstrates the card feed, ejection, and player-to-player dealing motion of the completed system.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <div>
+                    <p class="eyebrow">Annotated build</p>
+                    <h2>Mechanical system walkthrough</h2>
+                </div>
+            </div>
+
+            <div class="annotation-wheel-card">
+                <div class="annotation-wheel" data-annotation-wheel>
+                    <div class="annotation-stage" aria-live="polite">
+                        <figure class="annotation-slide is-active" data-title="Overall assembly" data-caption="The completed dealer bot integrates the card hopper, base rotation system, feed path, and electronics into one compact mechatronics platform.">
+                            <img src="photos/Annotated1.jpeg" alt="Annotated Dealer Bot system overview">
+                        </figure>
+                        <figure class="annotation-slide" data-title="Card handling path" data-caption="The card path was designed to guide individual cards from storage through controlled feeding and into the ejection region with consistent alignment.">
+                            <img src="photos/Annotated2.jpeg" alt="Annotated Dealer Bot card handling path">
+                        </figure>
+                        <figure class="annotation-slide" data-title="Transmission layout" data-caption="Gears and belt drive systems transfer motor motion into the hopper, pusher, card feed, and rotating base mechanisms used throughout the machine.">
+                            <img src="photos/Annotated3.jpeg" alt="Annotated Dealer Bot transmission layout">
+                        </figure>
+                        <figure class="annotation-slide" data-title="Electronics and controls" data-caption="The embedded control system coordinates motors, calibration routines, homing behavior, and game-specific dealing sequences.">
+                            <img src="photos/Annotated4.jpeg" alt="Annotated Dealer Bot electronics and controls">
+                        </figure>
+                        <figure class="annotation-slide" data-title="Final integrated prototype" data-caption="The final build demonstrates a complete shuffling and dealing workflow, combining mechanical design, fabrication, firmware, and system testing.">
+                            <img src="photos/Annotated5.jpeg" alt="Annotated Dealer Bot final integrated prototype">
+                        </figure>
+
+                        <div class="annotation-controls" aria-label="Annotated image controls">
+                            <button class="annotation-button" type="button" data-wheel-prev aria-label="Previous annotated image">‹</button>
+                            <button class="annotation-button" type="button" data-wheel-next aria-label="Next annotated image">›</button>
+                        </div>
+                    </div>
+
+                    <div class="annotation-caption-panel">
+                        <div>
+                            <p class="annotation-count" data-wheel-count>Image 1 of 5</p>
+                            <h3 data-wheel-title>Overall assembly</h3>
+                            <p data-wheel-caption>The completed dealer bot integrates the card hopper, base rotation system, feed path, and electronics into one compact mechatronics platform.</p>
+                        </div>
+
+                        <div class="annotation-thumbs" aria-label="Annotated image thumbnails">
+                            <button class="annotation-thumb is-active" type="button" data-wheel-thumb="0" aria-label="Show annotated image 1">
+                                <img src="photos/Annotated1.jpeg" alt="Thumbnail for annotated image 1">
+                            </button>
+                            <button class="annotation-thumb" type="button" data-wheel-thumb="1" aria-label="Show annotated image 2">
+                                <img src="photos/Annotated2.jpeg" alt="Thumbnail for annotated image 2">
+                            </button>
+                            <button class="annotation-thumb" type="button" data-wheel-thumb="2" aria-label="Show annotated image 3">
+                                <img src="photos/Annotated3.jpeg" alt="Thumbnail for annotated image 3">
+                            </button>
+                            <button class="annotation-thumb" type="button" data-wheel-thumb="3" aria-label="Show annotated image 4">
+                                <img src="photos/Annotated4.jpeg" alt="Thumbnail for annotated image 4">
+                            </button>
+                            <button class="annotation-thumb" type="button" data-wheel-thumb="4" aria-label="Show annotated image 5">
+                                <img src="photos/Annotated5.jpeg" alt="Thumbnail for annotated image 5">
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -135,8 +347,8 @@
                 <h2>System goal</h2>
             </div>
             <div>
-                <p>This project focuses on integrating a moving mechanical assembly with microcontroller-driven logic. The core challenge is to separate a single card from a stack, move it into a controlled eject position, and direct it toward the correct player location.</p>
-                <p>The build combines mechanical design, rapid prototyping, motor control, transmission design, web-based interaction, and iterative testing. The current system is still being refined, with emphasis on reliability, repeatability, and smooth actuation.</p>
+                <p>This project integrates a moving mechanical assembly with microcontroller-driven logic. The core challenge was to separate a single card from a stack, move it into a controlled eject position, and direct it toward the correct player location.</p>
+                <p>The finished build combines mechanical design, rapid prototyping, motor control, transmission design, web-based interaction, and iterative testing. The final system demonstrates reliable shuffling, repeatable motion, and smooth actuation across the full card-handling sequence.</p>
             </div>
         </section>
 
@@ -170,12 +382,12 @@
 
                 <div class="spec-box">
                     <h4>Calibration workflow</h4>
-                    <p>Designed the control logic around repeatable setup routines so player positions, card ejection behavior, and mechanical limits can be adjusted during testing.</p>
+                    <p>Designed the control logic around repeatable setup routines so player positions, card ejection behavior, and mechanical limits could be adjusted and validated during testing.</p>
                 </div>
 
                 <div class="spec-box">
-                    <h4>Prototype iteration</h4>
-                    <p>Refined the system through repeated mechanical testing, debugging, and design updates to improve feeding reliability and reduce missed motion events.</p>
+                    <h4>System integration</h4>
+                    <p>Refined the full machine through repeated mechanical testing, debugging, and design updates to improve feeding reliability, reduce missed motion events, and complete the final demonstration.</p>
                 </div>
             </div>
         </section>
@@ -187,15 +399,15 @@
                     <li>Separating one card at a time without double-feeding.</li>
                     <li>Maintaining repeatable motion across different deal distances.</li>
                     <li>Coordinating gear, belt, and roller-driven motion with software timing.</li>
-                    <li>Coordinating mechanical tolerances with software timing.</li>
-                    <li>Designing a control system that is easy to calibrate and test.</li>
+                    <li>Matching mechanical tolerances with consistent electronic control.</li>
+                    <li>Designing a control system that is easy to calibrate, test, and demonstrate.</li>
                 </ul>
             </div>
 
             <div class="feature-panel">
-                <h3>Current direction</h3>
-                <p>The next phase is focused on improving robustness through consistent motor drive logic, cleaner homing behavior, and a more polished user interface for game setup and calibration.</p>
-                <p>The project has become a strong test bed for mechanical iteration, embedded controls, transmission design, and practical debugging under real hardware constraints.</p>
+                <h3>Final outcome</h3>
+                <p>The completed project demonstrates a functional automated dealer bot that can organize cards, execute controlled dealing motions, and support a smoother game flow through embedded control.</p>
+                <p>The project became a strong test bed for mechanical iteration, embedded controls, transmission design, and practical debugging under real hardware constraints.</p>
             </div>
         </section>
     </main>
@@ -206,5 +418,47 @@
             <span><a href="index.html">Back to home</a></span>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const wheel = document.querySelector('[data-annotation-wheel]');
+            if (!wheel) return;
+
+            const slides = Array.from(wheel.querySelectorAll('.annotation-slide'));
+            const thumbs = Array.from(wheel.querySelectorAll('[data-wheel-thumb]'));
+            const title = wheel.querySelector('[data-wheel-title]');
+            const caption = wheel.querySelector('[data-wheel-caption]');
+            const count = wheel.querySelector('[data-wheel-count]');
+            const prev = wheel.querySelector('[data-wheel-prev]');
+            const next = wheel.querySelector('[data-wheel-next]');
+            let activeIndex = 0;
+
+            function showSlide(index) {
+                activeIndex = (index + slides.length) % slides.length;
+
+                slides.forEach((slide, slideIndex) => {
+                    slide.classList.toggle('is-active', slideIndex === activeIndex);
+                });
+
+                thumbs.forEach((thumb, thumbIndex) => {
+                    thumb.classList.toggle('is-active', thumbIndex === activeIndex);
+                });
+
+                const activeSlide = slides[activeIndex];
+                title.textContent = activeSlide.dataset.title;
+                caption.textContent = activeSlide.dataset.caption;
+                count.textContent = `Image ${activeIndex + 1} of ${slides.length}`;
+            }
+
+            prev.addEventListener('click', () => showSlide(activeIndex - 1));
+            next.addEventListener('click', () => showSlide(activeIndex + 1));
+
+            thumbs.forEach((thumb) => {
+                thumb.addEventListener('click', () => {
+                    showSlide(Number(thumb.dataset.wheelThumb));
+                });
+            });
+        });
+    </script>
 </body>
 </html>
