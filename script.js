@@ -1,12 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const revealTargets = document.querySelectorAll(
-        'main > section, .project-card, .feature-panel, .spec-box, .image-box, .media-card, .stat-card, .credit-block, .contact-card'
-    );
+    const revealTargets = document.querySelectorAll('main > section');
 
-    revealTargets.forEach((element, index) => {
+    revealTargets.forEach((element) => {
         element.classList.add('reveal-on-scroll');
-        element.style.transitionDelay = `${Math.min(index * 45, 260)}ms`;
     });
 
     if (reduceMotion || !('IntersectionObserver' in window)) {
@@ -22,9 +19,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, {
-        threshold: 0.12,
-        rootMargin: '0px 0px -7% 0px'
+        threshold: 0.08,
+        rootMargin: '0px 0px -5% 0px'
     });
 
-    revealTargets.forEach((element) => observer.observe(element));
+    revealTargets.forEach((element) => {
+        const rect = element.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.9) {
+            element.classList.add('is-visible');
+        } else {
+            observer.observe(element);
+        }
+    });
 });

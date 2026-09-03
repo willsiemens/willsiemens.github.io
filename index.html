@@ -5,116 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Will Siemens | Mechanical Engineering Portfolio</title>
-    <meta name="description" content="Mechanical engineering portfolio of Will Siemens, UC Berkeley class of 2026. Projects in mechanical design, robotics, manufacturing, FEA, and embedded systems.">
+    <meta name="description" content="Mechanical engineering portfolio of Will Siemens, UC Berkeley B.S. 2026 and current M.S. student. Projects in mechanical design, robotics, manufacturing, FEA, and embedded systems.">
     <link rel="canonical" href="https://willsiemens.github.io/" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-
-    <style>
-        /* Index-only hero fixes */
-        .home-hero.home-hero-split {
-            display: grid !important;
-            grid-template-columns: minmax(0, 720px) minmax(280px, 390px) !important;
-            gap: clamp(2rem, 6vw, 5rem);
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .home-hero-split .home-copy {
-            max-width: 720px;
-        }
-
-        .home-hero-split .home-title {
-            font-size: clamp(4rem, 8vw, 7.1rem);
-            line-height: 0.9;
-            letter-spacing: -0.065em;
-            margin-bottom: 1.15rem;
-            max-width: 780px;
-        }
-
-        .home-hero-split .home-title span {
-            display: inline !important;
-        }
-
-        .home-hero-split .home-title .name-gold {
-            color: var(--gold-deep);
-        }
-
-        .home-hero-split .lede {
-            max-width: 690px;
-        }
-
-        .home-hero-split .home-portrait {
-            justify-self: end;
-            width: min(100%, 390px);
-        }
-
-        .home-hero-split .portrait-frame {
-            padding: 0.55rem;
-        }
-
-        .home-hero-split .portrait-frame img {
-            width: 100%;
-            height: clamp(360px, 48vh, 500px);
-            object-fit: cover;
-            object-position: center 16%;
-            display: block;
-        }
-
-        .compact-contact {
-            padding: clamp(1.15rem, 2.5vw, 1.8rem);
-        }
-
-        .compact-contact h2 {
-            font-size: clamp(1.35rem, 2.4vw, 2rem);
-            line-height: 1.12;
-            max-width: 760px;
-        }
-
-        .compact-contact p {
-            font-size: 0.94rem;
-            line-height: 1.65;
-        }
-
-        .compact-contact .eyebrow {
-            font-size: 0.68rem;
-            margin-bottom: 0.55rem;
-        }
-
-        .compact-contact .btn {
-            font-size: 0.86rem;
-            padding: 0.72rem 1rem;
-        }
-
-        @media (max-width: 1020px) {
-            .home-hero.home-hero-split {
-                grid-template-columns: 1fr !important;
-            }
-
-            .home-hero-split .home-portrait {
-                justify-self: start;
-                width: min(100%, 360px);
-            }
-
-            .home-hero-split .portrait-frame img {
-                height: auto;
-                aspect-ratio: 4 / 5;
-            }
-        }
-
-        @media (max-width: 700px) {
-            .home-hero-split .home-title {
-                font-size: clamp(3.2rem, 17vw, 5.2rem);
-            }
-
-            .home-hero-split .home-portrait {
-                width: min(100%, 320px);
-            }
-        }
-    </style>
 </head>
 <body>
     <header class="site-header">
@@ -137,9 +34,9 @@
     </header>
 
     <main class="page-shell">
-        <section class="home-hero home-hero-split">
+        <section class="home-hero">
             <div class="home-copy">
-                <p class="eyebrow">UC Berkeley · Mechanical Engineering · Class of 2026 · 3.960 GPA</p>
+                <p class="eyebrow">UC Berkeley · M.S. Mechanical Engineering · B.S. 2026 · 3.96 GPA</p>
                 <h1 class="home-title">Will <span class="name-gold">Siemens</span></h1>
                 <p class="home-subtitle">Mechanical design and manufacturing project portfolio.</p>
                 <div class="button-row">
@@ -149,7 +46,7 @@
                 </div>
             </div>
 
-            <div class="home-portrait" aria-label="Portrait of Will Siemens">
+            <div class="home-portrait">
                 <div class="portrait-frame">
                     <img src="photos/Screenshot 2026-03-20 132517.png" alt="Will Siemens headshot">
                 </div>
@@ -163,8 +60,8 @@
             </div>
             <div>
                 <p>Balancing high-level athletics with a rigorous engineering curriculum has built my work ethic and ability to perform under pressure. My goal is to use mechanical engineering to build technology that is useful and reliable, and that leaves a positive impact on the world.</p>
-                <p>I have just graduated with a Bachelor of Science in Mechanical Engineering from the University of California, Berkeley, and I’ll be continuing on to a Master’s degree in Mechanical Engineering, also at Berkeley.</p>
-                <p>In the meantime, take a look at some of the projects I’ve been working on below.</p>
+                <p>I graduated with a Bachelor of Science in Mechanical Engineering from the University of California, Berkeley in 2026, and I am now completing Berkeley’s fifth-year master’s program in mechanical engineering.</p>
+                <p>Take a look at some of the projects I’ve been working on below.</p>
             </div>
         </section>
 
@@ -235,25 +132,25 @@
                 </div>
             </div>
             <div class="skills-grid">
-                <div class="feature-panel skill-card">
+                <div class="skill-card">
                     <h4>Design and analysis</h4>
                     <ul class="clean-list">
                         <li>CAD, primarily SolidWorks and Onshape</li>
-                        <li>Finite Element Analysis</li>
+                        <li>Finite element analysis</li>
                         <li>DFM and DFA</li>
                         <li>Rapid prototyping</li>
                     </ul>
                 </div>
-                <div class="feature-panel skill-card">
+                <div class="skill-card">
                     <h4>Manufacturing</h4>
                     <ul class="clean-list">
                         <li>Laser cutting and sheet metal</li>
                         <li>FDM 3D printing</li>
-                        <li>CNC Mill and Lathe</li>
+                        <li>CNC mill and lathe</li>
                         <li>Pneumatic systems</li>
                     </ul>
                 </div>
-                <div class="feature-panel skill-card">
+                <div class="skill-card">
                     <h4>Software and electronics</h4>
                     <ul class="clean-list">
                         <li>MATLAB, Python, MicroPython, and C++</li>
@@ -265,11 +162,11 @@
             </div>
         </section>
 
-        <section class="section contact-card compact-contact">
+        <section class="section contact-card">
             <div>
                 <p class="eyebrow">Connect</p>
-                <h2>Let’s Talk Engineering</h2>
-                <p>I am actively seeking internship and professional opportunities where I can contribute to challenging design and hardware projects.</p>
+                <h2>Get in touch</h2>
+                <p>I am seeking full-time mechanical engineering roles where I can contribute to challenging design and hardware projects.</p>
             </div>
             <div class="button-row">
                 <a class="btn btn-primary" href="mailto:w.siemens04@gmail.com">Email Me</a>
@@ -280,8 +177,10 @@
 
     <footer class="site-footer">
         <div class="footer-shell">
-            <span>© 2026 Will Siemens</span>
-            <span>Mechanical Engineering Portfolio</span>
+            <div class="tb-cell"><span class="tb-label">Name</span><span class="tb-value">Will Siemens</span></div>
+            <div class="tb-cell"><span class="tb-label">Contents</span><span class="tb-value">Mechanical engineering portfolio</span></div>
+            <div class="tb-cell"><span class="tb-label">Contact</span><span class="tb-value"><a href="mailto:w.siemens04@gmail.com">w.siemens04@gmail.com</a></span></div>
+            <div class="tb-cell"><span class="tb-label">Sheet</span><span class="tb-value">1 of 8 · © 2026</span></div>
         </div>
     </footer>
 </body>

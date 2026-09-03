@@ -7,7 +7,7 @@
     <meta name="description" content="Will Siemens is co-founder of an AI-native sports technology company built by UC Berkeley Division 1 athletes, currently live with real users.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 
@@ -35,11 +35,11 @@
             content: counter(process, decimal-leading-zero);
             position: absolute;
             left: 0;
-            top: -0.15rem;
-            font-family: "Playfair Display", Georgia, serif;
-            font-weight: 900;
-            font-size: 1.2rem;
-            color: var(--gold-deep);
+            top: 0.1rem;
+            font-family: var(--font-mono);
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--gold-dim);
         }
 
         .process-list strong {
@@ -60,10 +60,19 @@
             text-align: center;
         }
 
+        .short-version {
+            display: flex;
+        }
+
+        .short-version .feature-panel {
+            flex: 1;
+            border: 0;
+        }
+
         .statement p {
-            font-family: "Playfair Display", Georgia, serif;
-            font-weight: 800;
-            font-size: clamp(1.3rem, 3.2vw, 2.05rem);
+            font-family: var(--font-serif);
+            font-weight: 600;
+            font-size: clamp(1.3rem, 3vw, 1.9rem);
             line-height: 1.35;
             letter-spacing: -0.01em;
             color: var(--ink);
@@ -94,21 +103,20 @@
     <main class="page-shell">
         <section class="project-hero">
             <div class="project-copy">
-                <p class="eyebrow">Co-Founder · Sports Technology · 2026-Present</p>
+                <p class="eyebrow">Co-Founder · Sports Technology · 2026 to present</p>
                 <h1>A venture still taking shape.</h1>
                 <div class="project-meta">
                     <span class="meta-pill">Co-Founder</span>
                     <span class="meta-pill">Sports Technology</span>
-                    <span class="meta-pill">AI-Assisted Build</span>
                     <span class="meta-pill">Stealth Mode</span>
                     <span class="meta-pill">Live With Users</span>
                 </div>
                 <p class="lede">Outside the classroom and off the track, I’m building a sports technology company with a small group of fellow Cal athletes. The details are still under wraps, but the product is already live with real users.</p>
             </div>
-            <div class="project-media">
-                <div class="feature-panel" style="height: 100%;">
+            <div class="project-media short-version">
+                <div class="feature-panel">
                     <h4>The short version</h4>
-                    <p>We are not building toward whatever is trendiest. We are building toward the problems we felt firsthand as athletes, and leaning on AI to move faster than a team our size normally could.</p>
+                    <p>We’re a small founding team of Cal athletes working on a problem we ran into ourselves as athletes. We can’t share specifics publicly yet, but the product is live and in daily use.</p>
                 </div>
             </div>
         </section>
@@ -122,38 +130,38 @@
         <section class="section two-column">
             <div>
                 <p class="eyebrow">Origin</p>
-                <h2>A problem we lived before we tried to solve it.</h2>
+                <h2>It started with a problem we knew well.</h2>
             </div>
             <div>
-                <p>In early 2026, I teamed up with a small group of fellow UC Berkeley Division 1 athletes to start a company. None of us came at the idea from the outside. We had spent years inside the exact problem we are now trying to fix, which is part of why we felt we had something worth building.</p>
-                <p>Before a line of code was written, we spent over a month just listening: interviewing athletes, coaches, and program staff, and pressure-testing every assumption we had. That insider perspective still shapes every decision we make, from what we build to how we talk about it.</p>
-                <p>We are keeping specifics quiet for now. What I can say is that the product is already in the hands of real users, and we are learning from that every week.</p>
+                <p>In early 2026, I started a company with a small group of fellow UC Berkeley Division 1 athletes. The idea came directly out of our own experience: we had spent years dealing with the problem we are now working on, and we felt we understood it well enough to build something better.</p>
+                <p>Before writing any code, we spent over a month interviewing athletes, coaches, and program staff to test our assumptions. That research still drives most of our product decisions.</p>
+                <p>The specifics stay quiet for now, but the product is in the hands of real users, and we learn from them every week.</p>
             </div>
         </section>
 
         <section class="section two-column">
             <div>
                 <p class="eyebrow">How we work</p>
-                <h2>Four habits we don’t skip.</h2>
-                <p>None of these are groundbreaking on their own. Together, they are a big part of why a team this small can move this fast.</p>
+                <h2>Four habits that keep us moving.</h2>
+                <p>None of these are complicated on their own. Together, they are a big part of how a team this small keeps shipping.</p>
             </div>
             <div class="feature-panel">
                 <ol class="process-list">
                     <li>
-                        <strong>Listen before building</strong>
-                        <p>Every feature starts as something a real person told us they needed, not something that sounded good in a planning document.</p>
+                        <strong>Talk to users first</strong>
+                        <p>Every feature traces back to something an athlete, coach, or staff member told us in an interview or asked for after using the product.</p>
                     </li>
                     <li>
-                        <strong>Chase the problem, not the trend</strong>
-                        <p>We would rather solve something real in a plain way than chase whatever technology looks impressive this quarter.</p>
+                        <strong>Stay close to the problem</strong>
+                        <p>We prioritize what our users report over what looks impressive, even when the fix is unglamorous.</p>
                     </li>
                     <li>
-                        <strong>Let AI carry the weight</strong>
-                        <p>From architecture to iteration, AI is how a founding team without a large engineering staff still ships on pace with much bigger teams.</p>
+                        <strong>Use AI heavily</strong>
+                        <p>AI tooling handles a large share of our engineering work, which is how a founding team without a full engineering staff ships quickly.</p>
                     </li>
                     <li>
-                        <strong>Stay small on purpose</strong>
-                        <p>Instead of a broad launch, we are staying in tight feedback loops with a small group of real users before we scale up.</p>
+                        <strong>Ship to a small group</strong>
+                        <p>We keep a tight feedback loop with a limited set of users, and expand only when what we learn tells us to.</p>
                     </li>
                 </ol>
             </div>
@@ -162,7 +170,7 @@
         <section class="section">
             <div class="divider"></div>
             <div class="statement">
-                <p>Before we ever asked someone to use what we built, we made sure we had earned that ask.</p>
+                <p>A month of interviews came before the first line of code.</p>
             </div>
             <div class="divider"></div>
         </section>
@@ -170,16 +178,9 @@
         <section class="section two-column">
             <div>
                 <p class="eyebrow">Where AI fits</p>
-                <h2>Built AI-native, not AI-decorated.</h2>
-                <p>AI is not a feature we bolted on after the fact, it is the reason a team our size can build at all. It shows up in how we architect the product, how fast we can prototype, and how quickly user feedback turns into a shipped change.</p>
-                <p>That said, it does not stop at code. It also shapes how we read through user research, how we draft communication, and how we think through product decisions.</p>
-                <div class="tag-row" style="margin-top: 0.35rem; padding-top: 0;">
-                    <span class="tag">AI-Assisted Development</span>
-                    <span class="tag">Small, Fast-Moving Team</span>
-                    <span class="tag">Iterative Shipping</span>
-                    <span class="tag">Research-Driven Decisions</span>
-                    <span class="tag">Workflow Automation</span>
-                </div>
+                <h2>AI is central to how we build.</h2>
+                <p>A team our size can only ship at this pace because AI carries a large share of the engineering work. It shapes how we architect the product, how fast we prototype, and how quickly user feedback becomes a released change.</p>
+                <p>We also lean on it beyond code: synthesizing interview notes, drafting communication, and thinking through product decisions.</p>
             </div>
             <div class="feature-panel">
                 <h4>Where it shows up</h4>
@@ -194,17 +195,16 @@
 
         <section class="section two-column">
             <div>
-                <p class="eyebrow">Where things stand</p>
-                <h2>Early, but not unproven.</h2>
-                <p>We are still early. But early does not mean untested. We put in real work before asking anyone to trust us with their time.</p>
+                <p class="eyebrow">Status</p>
+                <h2>Where things stand today.</h2>
+                <p>We are still early, and there is a lot left to prove. Here is what is true right now.</p>
             </div>
             <div class="feature-panel">
-                <h4>What’s already true</h4>
+                <h4>Current status</h4>
                 <ul class="clean-list">
-                    <li>Built AI-native from the very first line of code, not retrofitted later</li>
-                    <li>Over a month of research before a single feature was built</li>
-                    <li>Currently deployed with real users, not just a private beta</li>
-                    <li>Expansion planned for this spring, based on what we learn now</li>
+                    <li>Live and in regular use with an initial group of real users</li>
+                    <li>Over a month of user research completed before development began</li>
+                    <li>Wider rollout planned, paced by what we learn from the current group</li>
                 </ul>
             </div>
         </section>
@@ -212,8 +212,10 @@
 
     <footer class="site-footer">
         <div class="footer-shell">
-            <span>© 2026 Will Siemens</span>
-            <span><a href="index.html">Back to home</a></span>
+            <div class="tb-cell"><span class="tb-label">Name</span><span class="tb-value">Will Siemens</span></div>
+            <div class="tb-cell"><span class="tb-label">Contents</span><span class="tb-value">Startup</span></div>
+            <div class="tb-cell"><span class="tb-label">Contact</span><span class="tb-value"><a href="mailto:w.siemens04@gmail.com">w.siemens04@gmail.com</a></span></div>
+            <div class="tb-cell"><span class="tb-label">Sheet</span><span class="tb-value">8 of 8 · <a href="index.html">Home</a></span></div>
         </div>
     </footer>
 </body>

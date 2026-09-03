@@ -7,7 +7,7 @@
     <meta name="description" content="Wind turbine design and prototyping project by Will Siemens, including CAD, FEA, blade design, and physical testing.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
@@ -34,7 +34,7 @@
     <main class="page-shell">
         <section class="project-hero reverse">
             <div class="project-copy">
-                <p class="eyebrow">CAD class project, Fall 2022</p>
+                <p class="eyebrow">CAD class project · Fall 2022</p>
                 <h1>Wind Turbine Design and Prototyping</h1>
                 <div class="project-meta">
                     <span class="meta-pill">CAD</span>
@@ -51,6 +51,7 @@
 
         <section class="two-column section-tight">
             <div>
+                <p class="eyebrow">Overview</p>
                 <h2>Project overview</h2>
             </div>
             <div>
@@ -59,14 +60,10 @@
             </div>
         </section>
 
-        <section class="section media-grid">
-            <div class="image-box image-photo">
-                <img src="photos/turbine-prototype.jpg" alt="Wind turbine prototype testing">
-                <p class="caption">Prototype testing setup.</p>
-            </div>
-            <div class="image-box image-compact">
+        <section class="section">
+            <div class="image-box">
                 <img src="photos/turbine-blade-profile.jpg" alt="Wind turbine blade side profile CAD">
-                <p class="caption">Blade side-profile CAD work.</p>
+                <p class="caption"><strong>Fig. 1:</strong> Side profile of the final blade design, modeled in SolidWorks.</p>
             </div>
         </section>
 
@@ -82,7 +79,7 @@
                 </div>
                 <div class="spec-box">
                     <h4>Project management</h4>
-                    <p>Acted as team facilitator by assigning workloads, managing deadlines, and supporting an equitable distribution of tasks.</p>
+                    <p>Acted as team facilitator, assigning workloads, managing deadlines, and keeping tasks evenly distributed across the team.</p>
                 </div>
             </div>
         </section>
@@ -93,12 +90,12 @@
                 <ul class="clean-list">
                     <li>The tower base needed to reach 16 inches using a maximum of 17 cubic inches of ABS plastic.</li>
                     <li>Printer volume constraints required the base to be designed as two separate 8-inch assemblies.</li>
-                    <li>The team overcame an initial knowledge gap in wind turbine physics through research and iteration.</li>
+                    <li>None of us had studied wind turbine physics before, so we closed that gap through research and design iteration.</li>
                 </ul>
             </div>
-            <div class="image-box image-compact">
-                <img src="photos/turbine-fea.jpg" alt="Tower FEA analysis showing stress concentration">
-                <p class="caption">FEA showing stress concentration in the upper tower half.</p>
+            <div class="image-box image-top">
+                <img src="photos/turbine-prototype.jpg" alt="Assembled wind turbine prototype before testing">
+                <p class="caption"><strong>Fig. 2:</strong> The assembled prototype ahead of power and load testing.</p>
             </div>
         </section>
 
@@ -106,18 +103,22 @@
             <div>
                 <p class="eyebrow">Results</p>
                 <h2>Testing drove the next design iteration.</h2>
+                <p>The blade design performed well, producing high power output in physical testing. FEA and applied horizontal load testing, however, showed that the tower lacked support in its upper half.</p>
+                <p>In a future iteration, I would redesign the tower with a thicker, more compact truss structure to better withstand wind loading and bending moments.</p>
             </div>
-            <div>
-                <p>The final blade design performed well and produced high power output during physical testing. However, FEA and applied horizontal load testing showed that the tower structure lacked support in the upper half.</p>
-                <p>For a future iteration, I would redesign the tower with a thicker, more compact truss structure to better withstand wind forces and bending moments.</p>
+            <div class="image-box image-compact">
+                <img src="photos/turbine-fea.jpg" alt="Tower FEA analysis showing stress concentration">
+                <p class="caption"><strong>Fig. 3:</strong> FEA showing stress concentration in the upper half of the tower.</p>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
         <div class="footer-shell">
-            <span>© 2026 Will Siemens</span>
-            <span><a href="index.html">Back to home</a></span>
+            <div class="tb-cell"><span class="tb-label">Name</span><span class="tb-value">Will Siemens</span></div>
+            <div class="tb-cell"><span class="tb-label">Contents</span><span class="tb-value">Wind Turbine Design and Prototyping</span></div>
+            <div class="tb-cell"><span class="tb-label">Contact</span><span class="tb-value"><a href="mailto:w.siemens04@gmail.com">w.siemens04@gmail.com</a></span></div>
+            <div class="tb-cell"><span class="tb-label">Sheet</span><span class="tb-value">6 of 8 · <a href="index.html">Home</a></span></div>
         </div>
     </footer>
 </body>

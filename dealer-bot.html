@@ -7,7 +7,7 @@
     <meta name="description" content="Automated dealer bot mechatronics project by Will Siemens, integrating mechanical dispensing, motors, gear and belt transmission systems, and embedded control.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 
@@ -22,10 +22,8 @@
 
         .demo-video-box,
         .annotation-wheel-card {
-            background: linear-gradient(180deg, rgba(16, 41, 70, 0.86), rgba(11, 29, 50, 0.94));
+            background: var(--surface);
             border: 1px solid var(--line);
-            border-radius: var(--radius);
-            box-shadow: var(--shadow-sm);
             padding: 0.8rem;
             overflow: hidden;
         }
@@ -33,9 +31,8 @@
         .demo-video-box video {
             width: 100%;
             display: block;
-            border-radius: var(--radius-sm);
-            background: #071523;
-            border: 1px solid rgba(179, 194, 218, 0.18);
+            background: var(--field-deep);
+            border: 1px solid var(--line);
             max-height: 560px;
             object-fit: contain;
         }
@@ -43,17 +40,13 @@
         .demo-video-box h3 {
             margin-top: 0.9rem;
             margin-bottom: 0.4rem;
-            color: var(--gold-soft);
+            color: var(--gold-pale);
         }
 
         .demo-video-box p {
             font-size: 0.9rem;
             margin-bottom: 0;
             color: var(--muted);
-        }
-
-        .dealer-highlight {
-            border-left: 3px solid var(--california-gold);
         }
 
         .annotation-wheel {
@@ -66,9 +59,8 @@
         .annotation-stage {
             position: relative;
             min-height: 420px;
-            background: #071523;
-            border: 1px solid rgba(179, 194, 218, 0.18);
-            border-radius: var(--radius-sm);
+            background: var(--field-deep);
+            border: 1px solid var(--line);
             overflow: hidden;
         }
 
@@ -91,7 +83,7 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
-            background: #071523;
+            background: var(--field-deep);
         }
 
         .annotation-controls {
@@ -108,34 +100,31 @@
             pointer-events: auto;
             appearance: none;
             border: 1px solid rgba(253, 181, 21, 0.4);
-            background: rgba(7, 21, 35, 0.88);
-            color: var(--gold-soft);
-            border-radius: var(--radius-sm);
+            background: rgba(8, 20, 32, 0.88);
+            color: var(--gold-pale);
             min-width: 2.65rem;
             min-height: 2.65rem;
             font-size: 1.35rem;
-            font-weight: 900;
+            font-weight: 600;
             cursor: pointer;
-            transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+            transition: background 0.18s ease, border-color 0.18s ease;
         }
 
         .annotation-button:hover {
-            transform: translateY(-2px);
             background: rgba(253, 181, 21, 0.14);
-            border-color: var(--california-gold);
+            border-color: var(--gold);
         }
 
         .annotation-caption-panel {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            border-left: 3px solid var(--california-gold);
+            border-left: 1px solid var(--line);
             padding: 1.15rem;
-            background: rgba(255, 255, 255, 0.03);
         }
 
         .annotation-caption-panel h3 {
-            color: var(--gold-soft);
+            color: var(--gold-pale);
             margin-bottom: 0.65rem;
         }
 
@@ -146,8 +135,9 @@
 
         .annotation-count {
             color: var(--muted);
-            font-size: 0.78rem;
-            font-weight: 900;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            font-weight: 500;
             letter-spacing: 0.14em;
             text-transform: uppercase;
             margin-bottom: 0.65rem;
@@ -163,20 +153,18 @@
         .annotation-thumb {
             appearance: none;
             padding: 0;
-            border: 1px solid rgba(179, 194, 218, 0.2);
-            background: #071523;
-            border-radius: var(--radius-sm);
+            border: 1px solid var(--line);
+            background: var(--field-deep);
             overflow: hidden;
             cursor: pointer;
             opacity: 0.62;
-            transition: opacity 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+            transition: opacity 0.18s ease, border-color 0.18s ease;
         }
 
         .annotation-thumb:hover,
         .annotation-thumb.is-active {
             opacity: 1;
-            border-color: var(--california-gold);
-            transform: translateY(-1px);
+            border-color: var(--gold);
         }
 
         .annotation-thumb img {
@@ -235,7 +223,7 @@
     <main class="page-shell">
         <section class="project-hero reverse">
             <div class="project-copy">
-                <p class="eyebrow">Completed automated mechatronics system</p>
+                <p class="eyebrow">Automated mechatronics build · Completed</p>
                 <h1>Dealer Bot</h1>
                 <div class="project-meta">
                     <span class="meta-pill">ESP32</span>
@@ -258,7 +246,7 @@
                 <h2>System goals</h2>
             </div>
             <div>
-                <p>This project integrates a moving mechanical assembly with microcontroller-driven logic. The main goal was to create a machine that could combine the common functions of shuffling and dealing into one compact system.</p>
+                <p>This project integrates a moving mechanical assembly with microcontroller-driven logic. The goal was to build a machine that combines shuffling and dealing into one compact system.</p>
                 <p>The core engineering challenge was to separate a single card from a stack, move it into a controlled eject position, and direct it toward the correct player location. The finished build combines mechanical design, rapid prototyping, motor control, transmission design, web-based interaction, and iterative testing.</p>
             </div>
         </section>
@@ -276,7 +264,7 @@
                     <p>Engineered a friction-based roller and feed concept to separate and deal single cards from a standard deck while reducing jams. The chassis and brackets were modeled in SolidWorks and 3D printed.</p>
                 </div>
 
-                <div class="spec-box dealer-highlight">
+                <div class="spec-box">
                     <h4>Transmission systems</h4>
                     <p>Used gear trains and belt drive systems as the main mechanical transmission methods to transfer motor output into controlled hopper movement, pusher motion, card feeding, and rotational positioning.</p>
                 </div>
@@ -423,18 +411,20 @@
                 <p class="eyebrow">Completed build</p>
                 <h2>Final outcomes</h2>
             </div>
-            <div class="feature-panel dealer-highlight">
-                <p>The completed project demonstrates a functional automated dealer bot that can organize cards, execute controlled dealing motions, and support smoother game flow through embedded control.</p>
-                <p>The final system successfully combines mechanical card handling, gear and belt transmission, motor-driven actuation, calibration logic, and user interaction into one working mechatronics platform.</p>
-                <p>The project became a strong test bed for mechanical iteration, embedded controls, transmission design, and practical debugging under real hardware constraints.</p>
+            <div class="feature-panel">
+                <p>The finished dealer bot organizes cards, executes controlled dealing motions, and keeps a game moving through embedded control.</p>
+                <p>It brings together mechanical card handling, gear and belt transmission, motor-driven actuation, calibration logic, and user interaction in one working mechatronics platform.</p>
+                <p>Along the way, the build became a strong test bed for mechanical iteration, embedded controls, transmission design, and practical debugging under real hardware constraints.</p>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
         <div class="footer-shell">
-            <span>© 2026 Will Siemens</span>
-            <span><a href="index.html">Back to home</a></span>
+            <div class="tb-cell"><span class="tb-label">Name</span><span class="tb-value">Will Siemens</span></div>
+            <div class="tb-cell"><span class="tb-label">Contents</span><span class="tb-value">Automated Dealer Bot</span></div>
+            <div class="tb-cell"><span class="tb-label">Contact</span><span class="tb-value"><a href="mailto:w.siemens04@gmail.com">w.siemens04@gmail.com</a></span></div>
+            <div class="tb-cell"><span class="tb-label">Sheet</span><span class="tb-value">3 of 8 · <a href="index.html">Home</a></span></div>
         </div>
     </footer>
 
